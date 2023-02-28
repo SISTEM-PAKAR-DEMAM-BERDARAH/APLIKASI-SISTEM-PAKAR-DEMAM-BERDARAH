@@ -31,7 +31,9 @@
                      <h1><span class="uil-coronavirus text-primary"></span></h1>
                   </div>
                   <div>
-                     <h4 class="mb-1 mt-1"><span data-plugin="counterup">198</span></h4>
+                     <h4 class="mb-1 mt-1">
+                        <span data-plugin="counterup"><?= $totalpenyakit; ?></span>
+                     </h4>
                      <p class="text-muted mb-0">Jumlah Penyakit</p>
                   </div>
                   <p class="text-muted mt-3 mb-0 text-right"><span class="text-primary me-1"><i class="uil-coronavirus me-1"></i>detail data penyakit</span>
@@ -46,7 +48,9 @@
                      <h1><span class="uil-coronavirus text-warning"></span></h1>
                   </div>
                   <div>
-                     <h4 class="mb-1 mt-1"><span data-plugin="counterup">198</span></h4>
+                     <h4 class="mb-1 mt-1">
+                        <span data-plugin="counterup"><?= $totalgejala; ?></span>
+                     </h4>
                      <p class="text-muted mb-0">Jumlah Gejala</p>
                   </div>
                   <p class="text-muted mt-3 mb-0 text-right"><span class="text-warning me-1"><i class="uil-coronavirus me-1"></i>detail data gejala</span>
@@ -76,7 +80,9 @@
                      <h1><span class="uil-medkit text-success"></span></h1>
                   </div>
                   <div>
-                     <h4 class="mb-1 mt-1"><span data-plugin="counterup">198</span></h4>
+                     <h4 class="mb-1 mt-1">
+                        <span data-plugin="counterup"><?= $totalsolusi; ?></span>
+                     </h4>
                      <p class="text-muted mb-0">Jumlah Pengobatan</p>
                   </div>
                   <p class="text-muted mt-3 mb-0 text-right"><span class="text-success me-1"><i class="uil-medkit me-1"></i>detail data pengobatan</span>
@@ -91,7 +97,9 @@
                      <h1><span class="uil-book text-primary"></span></h1>
                   </div>
                   <div>
-                     <h4 class="mb-1 mt-1"><span data-plugin="counterup">198</span></h4>
+                     <h4 class="mb-1 mt-1">
+                        <span data-plugin="counterup"><?= $totalpengetahuan; ?></span>
+                     </h4>
                      <p class="text-muted mb-0">Basis Pengetahuan</p>
                   </div>
                   <p class="text-muted mt-3 mb-0 text-right"><span class="text-primary me-1"><i class="uil-book me-1"></i>detail basis pengetahuan</span>

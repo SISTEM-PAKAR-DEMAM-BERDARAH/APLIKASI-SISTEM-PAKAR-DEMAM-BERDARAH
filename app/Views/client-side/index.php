@@ -19,13 +19,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto cek">
               <li class="nav-item ">
-                <a href="/index.html" class="btn btn-danger nav-link px-4">Login</a>
+                <a href="/log-in" class="btn btn-danger nav-link px-4">Login</a>
               </li>
               <li class="nav-item">
-                <a href="/home.html" class="nav-link">Home</a>
+                <a href="/home" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
-                <a href="/diagnosa.html" class="nav-link">Diagnosa</a>
+                <a href="/diagnosa" class="nav-link">Diagnosa</a>
               </li>
               <li class="nav-item">
                 <a href="/info.html" class="nav-link">Info</a>

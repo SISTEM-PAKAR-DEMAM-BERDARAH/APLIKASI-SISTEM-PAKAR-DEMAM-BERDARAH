@@ -3,6 +3,10 @@
 namespace Config;
 
 use App\Controllers\Admin\DashboardController;
+use App\Controllers\Admin\GejalaController;
+use App\Controllers\Admin\PengetahuanController;
+use App\Controllers\Admin\PenyakitController;
+use App\Controllers\Admin\SolusiController;
 use App\Controllers\Admin\UsersController;
 use App\Controllers\Home;
 use App\Controllers\User\LandingController;
@@ -38,10 +42,15 @@ $routes->set404Override();
 // ADMIN
 $routes->get('/', [DashboardController::class, 'index']);
 $routes->get('/data-pengguna', [UsersController::class, 'index']);
-
+$routes->get('/basis-pengetahuan', [PengetahuanController::class, 'index']);
+$routes->get('/data-gejala', [GejalaController::class, 'index']);
+$routes->get('/data-penyakit', [PenyakitController::class, 'index']);
+$routes->get('/data-solusi', [SolusiController::class, 'index']);
 
 // USER
-$routes->get('/home', [LandingController::class, 'index']);
+$routes->get('/log-in', [LandingController::class, 'index']);
+$routes->get('/home', [LandingController::class, 'home']);
+$routes->get('/diagnosa', [LandingController::class, 'diagnosa']);
 
 /*
  * --------------------------------------------------------------------

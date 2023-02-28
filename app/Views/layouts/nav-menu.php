@@ -16,7 +16,7 @@
                </li>
 
                <li class="nav-item">
-                  <a class="nav-link" href="/">
+                  <a class="nav-link" href="/basis-pengetahuan">
                      <i class="uil-book-alt me-2"></i> Basis Pengetahuan
                   </a>
                </li>
@@ -26,8 +26,8 @@
                      <i class="uil-coronavirus me-2"></i>Data Penyakit <div class="arrow-down"></div>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="topnav-pages">
-                     <a href="/" class="dropdown-item">Gejala</a>
-                     <a href="/" class="dropdown-item">Penyakit</a>
+                     <a href="/data-gejala" class="dropdown-item">Gejala</a>
+                     <a href="/data-penyakit" class="dropdown-item">Penyakit</a>
                   </div>
                </li>
 
@@ -37,7 +37,7 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="topnav-pages">
                      <a href="/" class="dropdown-item">Pencegahan</a>
-                     <a href="/" class="dropdown-item">Pengobatan</a>
+                     <a href="/data-solusi" class="dropdown-item">Pengobatan</a>
                   </div>
                </li>
 
@@ -47,7 +47,7 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="topnav-pages">
                      <a href="/" class="dropdown-item">Hasil Diagnosa</a>
-                     <a href="/home" class="dropdown-item">Halaman Diagnosa</a>
+                     <a href="/log-in" class="dropdown-item">Halaman Diagnosa</a>
                   </div>
                </li>
             </ul>

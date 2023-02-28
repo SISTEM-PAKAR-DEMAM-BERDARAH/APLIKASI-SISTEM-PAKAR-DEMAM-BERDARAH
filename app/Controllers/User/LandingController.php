@@ -10,4 +10,12 @@ class LandingController extends BaseController
    {
       return view('/client-side/index');
    }
+   public function home()
+   {
+      return view('/client-side/home');
+   }
+   public function diagnosa()
+   {
+      return view('/client-side/diagnosa');
+   }
 }

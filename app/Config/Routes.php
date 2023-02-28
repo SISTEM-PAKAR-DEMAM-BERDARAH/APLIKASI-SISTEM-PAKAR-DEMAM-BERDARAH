@@ -51,6 +51,7 @@ $routes->get('/data-solusi', [SolusiController::class, 'index']);
 $routes->get('/log-in', [LandingController::class, 'index']);
 $routes->get('/home', [LandingController::class, 'home']);
 $routes->get('/diagnosa', [LandingController::class, 'diagnosa']);
+$routes->get('/register', [LandingController::class, 'register']);
 
 /*
  * --------------------------------------------------------------------

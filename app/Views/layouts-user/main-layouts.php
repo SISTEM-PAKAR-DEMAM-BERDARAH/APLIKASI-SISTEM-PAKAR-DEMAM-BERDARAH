@@ -11,18 +11,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 
 </head>
 <body>
-    <?= $this->include('/layouts-user/navbar') ?>
+    <header>  
+          <?= $this->include('/layouts-user/navbar') ?>
+    </header>
 
     <div class="content">
     <?= $this->renderSection('content') ?>
     </div>
 
-    <div class="footer">
-    <?= $this->include('/layouts-user/footer') ?>
-    </div>
 <script src="/user-assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

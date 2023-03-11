@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SP-DBD | Login</title>
+    <title>Sistem Pakar - DBD (Demam Berdarah Dengue)</title>
     <link rel="stylesheet" href="/user-assets/css/bootstrap.min.css">
    <link rel="stylesheet" href="/user-assets/css/style.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
                 <div class="d-grid gap-2 col-3 mx-auto mb-3 ">
                     <button class="btn btn-danger fw-bold" type="button">LOGIN</button>
                   </div>
-                <p class="text-center mt-2">Belum mempunyai akun ? <a href="register" class="text-decoration-none text-black">Daftar</a></p>
+                <p class="text-center mt-2">Belum mempunyai akun ? <a href="register" class="text-decoration-none text-black bg-transparent">Daftar</a></p>
               </form>   
         </div>
       </div>

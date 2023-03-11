@@ -1,11 +1,24 @@
 <?php
 
 namespace App\Controllers\User;
-
 use App\Controllers\BaseController;
+use App\Models\GejalaModel;
+
 
 class LandingController extends BaseController
 {
+   protected $GejalaModel;
+
+   public function __construct()
+   {
+      $this->GejalaModel = new GejalaModel();
+   }
+
+   public function register ()
+   {
+      return view('/client-side/register');
+   }
+
    public function index()
    {
     return view ('client-side/index');
@@ -14,12 +27,27 @@ class LandingController extends BaseController
    {
       return view('/client-side/home');
    }
+
    public function diagnosa()
    {
-      return view('/client-side/diagnosa');
+      $data = [
+         'datagejala' => $this->GejalaModel->datagejala()
+      ];
+      return view('/client-side/diagnosa', $data);
    }
-   public function register ()
+
+   public function diagnosa2 ()
    {
-      return view('/client-side/register');
+      return view('/client-side/diagnosa2');
+   }
+
+   public function info ()
+   {
+      return view('/client-side/info');
+   }
+
+   public function kontak ()
+   {
+      return view('/client-side/kontak');
    }
 }

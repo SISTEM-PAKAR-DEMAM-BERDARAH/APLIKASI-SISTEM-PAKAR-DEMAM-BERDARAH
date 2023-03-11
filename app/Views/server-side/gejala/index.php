@@ -22,7 +22,9 @@
          </div>
       </div>
       <!-- end page title -->
-
+      <a href="/data-gejala/create" class="btn btn-primary waves-effect waves-light me-1 mb-3">
+         Tambah Gejala
+      </a>
       <div class="row">
          <div class="col-12">
             <div class="card">
@@ -49,8 +51,12 @@
                                        Opsi <i class="mdi mdi-chevron-down"></i>
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-                                       <a class="dropdown-item" href="#">Edit</a>
-                                       <a class="dropdown-item" href="#">Hapus</a>
+                                       <a class="dropdown-item" href="/data-gejala/edit/<?= $calldata['kode_gejala'] ?>">Edit</a>
+                                       <form action="/data-gejala/<?= $calldata['kode_gejala']; ?>" method="post" class="d-inline">
+                                          <?= csrf_field(); ?>
+                                          <input type="hidden" name="_method" value="DELETE">
+                                          <button type="submit" class="dropdown-item">Hapus</button>
+                                       </form>
                                     </div>
                                  </div>
                               </td>

@@ -84,7 +84,6 @@ class PenyakitController extends BaseController
             'rules' => 'required',
             'errors' => [
                'required' => 'Nama penyakit harus diisi.',
-               'is_unique' => 'Penyakit sudah terdaftar.'
             ]
          ],
          'detail_penyakit' => [

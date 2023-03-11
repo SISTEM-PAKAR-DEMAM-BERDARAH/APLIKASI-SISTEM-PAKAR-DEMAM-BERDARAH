@@ -47,14 +47,21 @@ $routes->get('/data-gejala', [GejalaController::class, 'index']);
 $routes->get('/data-penyakit', [PenyakitController::class, 'index']);
 $routes->get('/data-solusi', [SolusiController::class, 'index']);
 
-//! Routes Penyakit
+//! ROUTES PENYAKIT
 $routes->get('/data-penyakit/create', [PenyakitController::class, 'create']);
 $routes->post('/data-penyakit/insert', [PenyakitController::class, 'insert']);
 $routes->post('/data-penyakit/update/(:any)', [PenyakitController::class, 'update/$1']);
 $routes->get('/data-penyakit/edit/(:segment)', [PenyakitController::class, 'edit/$1']);
 $routes->delete('/data-penyakit/(:any)', [PenyakitController::class, 'delete']);
 
-//! Routes Gejala
+//! ROUTES GEJALA
+$routes->get('/data-gejala/create', [GejalaController::class, 'create']);
+$routes->post('/data-gejala/insert', [GejalaController::class, 'insert']);
+$routes->post('/data-gejala/update/(:any)', [GejalaController::class, 'update/$1']);
+$routes->get('/data-gejala/edit/(:segment)', [GejalaController::class, 'edit/$1']);
+$routes->delete('/data-gejala/(:any)', [GejalaController::class, 'delete']);
+
+//! ROUTES BASIS PENGETAHUAN
 
 //! USER
 $routes->get('/log-in', [LandingController::class, 'index']);

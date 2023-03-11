@@ -39,7 +39,7 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-// ADMIN
+//! ADMIN
 $routes->get('/', [DashboardController::class, 'index']);
 $routes->get('/data-pengguna', [UsersController::class, 'index']);
 $routes->get('/basis-pengetahuan', [PengetahuanController::class, 'index']);
@@ -47,7 +47,16 @@ $routes->get('/data-gejala', [GejalaController::class, 'index']);
 $routes->get('/data-penyakit', [PenyakitController::class, 'index']);
 $routes->get('/data-solusi', [SolusiController::class, 'index']);
 
-// USER
+//! Routes Penyakit
+$routes->get('/data-penyakit/create', [PenyakitController::class, 'create']);
+$routes->post('/data-penyakit/insert', [PenyakitController::class, 'insert']);
+$routes->post('/data-penyakit/update/(:any)', [PenyakitController::class, 'update/$1']);
+$routes->get('/data-penyakit/edit/(:segment)', [PenyakitController::class, 'edit/$1']);
+$routes->delete('/data-penyakit/(:any)', [PenyakitController::class, 'delete']);
+
+//! Routes Gejala
+
+//! USER
 $routes->get('/log-in', [LandingController::class, 'index']);
 $routes->get('/home', [LandingController::class, 'home']);
 $routes->get('/diagnosa', [LandingController::class, 'diagnosa']);

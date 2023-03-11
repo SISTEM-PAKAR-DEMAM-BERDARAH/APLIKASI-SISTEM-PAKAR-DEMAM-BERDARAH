@@ -8,8 +8,12 @@ Options -Indexes
 # Turning on the rewrite engine is necessary for the following rules and features.
 # FollowSymLinks must be enabled for this to work.
 <IfModule mod_rewrite.c>
+	Options All -Indexes
 	Options +FollowSymlinks
 	RewriteEngine On
+
+	RewriteCond $1 !^(index\.php|css|(.*)\.css|(.*)\.js|(.*)\.jpg|(.*)\.jpeg|(.*)\.png|(.*)\.bmp|(.*)\.gif|(.*)\.doc|(.*)\.shtml|robots\.txt|favicon\.ico)
+	RewriteRule ^(.*)$ ./index.php/$1 [L]
 
 	# If you installed CodeIgniter in a subfolder, you will need to
 	# change the following line to match the subfolder you need.

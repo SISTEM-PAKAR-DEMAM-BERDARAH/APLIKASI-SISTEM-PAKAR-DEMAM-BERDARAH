@@ -7,9 +7,28 @@ use CodeIgniter\Model;
 class PengetahuanModel extends Model
 {
    protected $table = 'basis_pengetahuan';
+   protected $useAutoIncrement = false;
    protected $primaryKey = 'kode_pengetahuan';
+   protected $allowedFields = ['kode_pengetahuan', 'kode_penyakit', 'kode_gejala', 'cf_pakar'];
 
-   public function datapengetahuan() {
+
+   public function datapengetahuan()
+   {
       return $this->db->table('basis_pengetahuan')->join('penyakit', 'penyakit.kode_penyakit = basis_pengetahuan.kode_penyakit', 'inner')->join('gejala', 'gejala.kode_gejala = basis_pengetahuan.kode_gejala', 'inner')->get()->getResultArray();
+   }
+
+   public function getPengetahuan($id)
+   {
+      return $this->where(['kode_pengetahuan' => $id])->first();
+   }
+
+   public function getPenyakit($id)
+   {
+      return $this->table('basis_pengetahuan')->join('penyakit', 'penyakit.kode_penyakit = basis_pengetahuan.kode_penyakit', 'inner')->where(['kode_pengetahuan' => $id])->first();
+   }
+
+   public function getGejala($id)
+   {
+      return $this->table('basis_pengetahuan')->join('gejala', 'gejala.kode_gejala = basis_pengetahuan.kode_gejala', 'inner')->where(['kode_pengetahuan' => $id])->first();
    }
 }

@@ -19,6 +19,7 @@
    <!-- Icons Css -->
    <link href="<?= base_url('assets/css/icons.min.css') ?>" rel="stylesheet" type="text/css" />
    <!-- App Css-->
+   <link href="<?= base_url('assets/libs/select2/css/select2.min.css') ?>" rel="stylesheet" type="text/css" />
    <link href="<?= base_url('assets/css/app.min.css') ?> " id="app-style" rel="stylesheet" type="text/css" />
 </head>
 
@@ -77,6 +78,8 @@
    <script src="<?= base_url('assets/js/pages/dashboard.init.js') ?>"></script>
    <!-- App js -->
    <script src="<?= base_url('assets/js/app.js') ?>"></script>
+   <script src="<?= base_url('assets/libs/select2/js/select2.min.js') ?>"></script>
+   <script src="<?= base_url('assets/js/pages/form-advanced.init.js') ?>"></script>
 
    <!-- Parsley js -->
    <script src="<?= base_url('assets/pages/parsley.min.js') ?>"></script>

@@ -62,6 +62,13 @@ $routes->get('/data-gejala/edit/(:segment)', [GejalaController::class, 'edit/$1'
 $routes->delete('/data-gejala/(:any)', [GejalaController::class, 'delete']);
 
 //! ROUTES BASIS PENGETAHUAN
+$routes->get('/basis-pengetahuan/create', [PengetahuanController::class, 'create']);
+$routes->post('/basis-pengetahuan/insert', [PengetahuanController::class, 'insert']);
+$routes->post('/basis-pengetahuan/update/(:any)', [PengetahuanController::class, 'update/$1']);
+$routes->get('/basis-pengetahuan/edit/(:segment)', [PengetahuanController::class, 'edit/$1']);
+$routes->delete('/basis-pengetahuan/(:any)', [PengetahuanController::class, 'delete']);
+
+
 
 //! USER
 $routes->get('/log-in', [LandingController::class, 'index']);

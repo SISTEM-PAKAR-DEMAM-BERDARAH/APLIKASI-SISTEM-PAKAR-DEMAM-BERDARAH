@@ -63,7 +63,7 @@
                             </div>
                             <div>
                                 <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
-                                    Tambah
+                                    Update
                                 </button>
                                 <a href="/basis-pengetahuan" class="btn btn-secondary waves-effect">
                                     Kembali

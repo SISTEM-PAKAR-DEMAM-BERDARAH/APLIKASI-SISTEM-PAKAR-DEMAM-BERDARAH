@@ -9,11 +9,10 @@
                 <h1 class="fw-bold">Sistem Pakar</h1>
                 <p> sistem pakar adalah sebuah program komputer yang dirancang untuk mengambil keputusan seperti keputusan yangdiambil oleh seorang pakar, dimana sistem pakar menggunakan pengetahuan (Knowledge), fakta dan teknik berfikir dalam menyelesaikan masalah-masalah yang biasanya janya dapat diselesaikan oleh seorang pakar dari bidang yang bersangkutan (Wijaya, 2007 dalam Hayadi & Rukun, 2016).</p>
 
-                <h4>Apa tujuan Sistem pakar ini?</h4>
+                <h5>Apa tujuan Sistem pakar ini?</h5>
                 <p>Membantu pengguna dalam mengidentifikasi gejala demam berdarah dengue  berdasarkan gejala yang ada</p>
             </div>
             <div class="col-md-6 mt-5">
-                <h1 class="text-center fw-bold">Kelebihan</h1>
                 <div class="row">
                     <div class="col-5 card">
                         <img src="user-assets/images/2.png" alt="" class="rounded mx-auto">

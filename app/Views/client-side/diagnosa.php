@@ -5,8 +5,8 @@
   <div class="row">
     <div class="col-md-12 mt-5">
       <form action="diagnosa2" method="get">
-        <div class="card text-center mb-5 border-0 mt-5">
-          <div class="card-header p-3 bg-transparent">
+        <div class="card text-center mb-5 border-0 mt-5 ">
+          <div class="card-header p-3">
             <h1 class="text-center fw-bold">DIAGNOSA</h1>
             <h5 class="text-center">Pilihlah gejala sesuai yang anda rasakan !</h5>
           </div>

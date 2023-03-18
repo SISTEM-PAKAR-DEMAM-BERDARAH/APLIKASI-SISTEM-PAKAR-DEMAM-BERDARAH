@@ -26,7 +26,7 @@
                 Username
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="edit">Ubah Password</a></li>
+                <li><a class="dropdown-item" href="/edit">Ubah Password</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="log-in">Logout</a></li>
               </ul>

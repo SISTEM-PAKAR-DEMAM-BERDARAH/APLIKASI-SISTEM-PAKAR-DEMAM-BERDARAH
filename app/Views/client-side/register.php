@@ -7,6 +7,7 @@
     <title>Sistem Pakar - DBD (Demam Berdarah Dengue)</title>
     <link rel="stylesheet" href="/user-assets/css/bootstrap.min.css">
    <link rel="stylesheet" href="/user-assets/css/style.css">
+   <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.ico') ?>">
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
@@ -20,19 +21,19 @@
             <p class="text-center">Masukan Data Diri Anda !</p>
             <form>
                   <div class="mb-4">
-                      <input class="form-control" type="email" placeholder="nama Lengkap">
+                      <input class="form-control" type="email" placeholder="nama Lengkap" required autocomplete="off">
                   </div>
                   <div class="mb-4 ">
-                      <input class="form-control" type="text" placeholder="Username">
+                      <input class="form-control" type="text" placeholder="Username" required autocomplete="off">
                   </div>
                   <div class="mb-4 ">
-                    <input class="form-control" type="password" placeholder="Password">
+                    <input class="form-control" type="password" placeholder="Password" required autocomplete="off">
                  </div>
                   <div class="mb-4 ">
-                  <input class="form-control" type="password" placeholder="Ulangi Password">
+                  <input class="form-control" type="password" placeholder="Ulangi Password" required autocomplete="off">
                   </div>
                 <div class="mb-4 ">
-                  <input class="form-control" type="text" placeholder="Alamat">
+                  <input class="form-control" type="text" placeholder="Alamat" required autocomplete="off">
                  </div>
                 <div class="d-grid gap-2 col-3 mx-auto">
                   <button class="btn btn-danger fw-bold" type="button">DAFTAR</button>

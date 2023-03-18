@@ -50,4 +50,14 @@ class LandingController extends BaseController
    {
       return view('/client-side/kontak');
    }
+
+   public function tentang ()
+   {
+      return view('/client-side/tentang');
+   }
+
+   public function edit ()
+   {
+      return view('/client-side/edit');
+   }
 }

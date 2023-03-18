@@ -14,7 +14,7 @@
           </button>
         </div>
         <div class="col-6 mt-3">
-           <img src="/user-assets/images/doctor.jpg" alt="Assets-Doctor">
+           <img src="/user-assets/images/doctor.png" alt="Assets-Doctor">
         </div>
     </div>
 </div>

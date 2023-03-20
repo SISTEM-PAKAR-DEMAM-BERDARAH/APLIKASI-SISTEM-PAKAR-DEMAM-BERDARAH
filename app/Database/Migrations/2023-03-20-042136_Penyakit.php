@@ -19,10 +19,6 @@ class Penyakit extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'detail_penyakit' => [
-                'type' => 'TEXT',
-                'null' => false,
-            ],
             'gambar' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '255',

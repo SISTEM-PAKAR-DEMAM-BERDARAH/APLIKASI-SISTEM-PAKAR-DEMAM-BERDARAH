@@ -36,7 +36,6 @@
                               <th>#No</th>
                               <th>Kode Penyakit</th>
                               <th>Nama Penyakit</th>
-                              <th>Detail</th>
                               <th>Gambar</th>
                               <th>Lain-lain</th>
                            </tr>
@@ -48,7 +47,6 @@
                                  <td><?= $number++; ?></td>
                                  <td><?= $calldata['kode_penyakit']; ?></td>
                                  <td><?= $calldata['nama_penyakit']; ?></td>
-                                 <td><?= $calldata['detail_penyakit']; ?></td>
                                  <td><?= $calldata['gambar']; ?></td>
                                  <td>
                                     <div class="btn-group" role="group">

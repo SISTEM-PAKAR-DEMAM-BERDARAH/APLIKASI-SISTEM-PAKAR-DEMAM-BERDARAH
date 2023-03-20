@@ -25,7 +25,10 @@ class GejalaController extends BaseController
 
    public function create()
    {
-      return view('/server-side/gejala/create');
+      $data = [
+         'autocode' => $this->GejalaModel->autoCodeGejala()
+      ];
+      return view('/server-side/gejala/create', $data);
    }
 
    public function insert()

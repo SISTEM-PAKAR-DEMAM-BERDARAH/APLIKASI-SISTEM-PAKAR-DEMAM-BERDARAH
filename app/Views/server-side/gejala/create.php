@@ -13,7 +13,7 @@
                             <?= csrf_field() ?>
                             <div class="mb-3">
                                 <label for="kode_gejala" class="form-label">Kode Gejala</label></label>
-                                <input type="text" class="form-control" id="kode_gejala" name="kode_gejala" placeholder="G01" />
+                                <input type="text" class="form-control bg-light" id="kode_gejala" name="kode_gejala" value="<?= $autocode ?>" readonly />
                             </div>
                             <div class="mb-3">
                                 <label for="nama_gejala" class="form-label">Nama Gejala</label>

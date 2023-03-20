@@ -17,6 +17,16 @@ class GejalaModel extends Model
       return $this->findAll();
    }
 
+   public function autoCodeGejala()
+   {
+      $selectId = $this->db->table('gejala')->selectMax('kode_gejala')->get()->getResultArray();
+      foreach ($selectId as $gejalaId) {
+         $maxId = $gejalaId['kode_gejala'];
+      }
+      $resultId = (int) substr($maxId, 1) + 1;
+      return 'G' . sprintf("%02s", $resultId);
+   }
+
    public function getGejala($id)
    {
       return $this->where(['kode_gejala' => $id])->first();

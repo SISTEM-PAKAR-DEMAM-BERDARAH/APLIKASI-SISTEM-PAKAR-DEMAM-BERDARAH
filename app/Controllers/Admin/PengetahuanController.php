@@ -33,7 +33,8 @@ class PengetahuanController extends BaseController
    {
       $data = [
          'penyakit' => $this->PenyakitModel->datapenyakit(),
-         'gejala' => $this->GejalaModel->datagejala()
+         'gejala' => $this->GejalaModel->datagejala(),
+         'autocode' => $this->PengetahuanModel->autoCodePengetahuan()
       ];
       return view('/server-side/basis-pengetahuan/create', $data);
    }

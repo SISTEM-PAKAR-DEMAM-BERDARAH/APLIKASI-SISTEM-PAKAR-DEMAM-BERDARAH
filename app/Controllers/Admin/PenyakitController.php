@@ -25,7 +25,10 @@ class PenyakitController extends BaseController
 
    public function create()
    {
-      return view('/server-side/penyakit/create');
+      $data = [
+         'autocode' => $this->PenyakitModel->autoCodePenyakit()
+      ];
+      return view('/server-side/penyakit/create', $data);
    }
 
    public function insert()
@@ -39,29 +42,30 @@ class PenyakitController extends BaseController
                'is_unique' => 'Penyakit sudah terdaftar.'
             ]
          ],
-         'detail_penyakit' => [
-            'rules' => 'required',
-            'errors' => [
-               'required' => 'Detail penyakit harus diisi.',
-            ]
-         ],
          'gambar' => [
-            'rules' => 'required',
+            'rules' => 'uploaded[gambar]|mime_in[gambar,image/jpg,image/jpeg,image/gif,image/png]|max_size[gambar,2048]',
             'errors' => [
-               'required' => 'Gambar harus diisi.',
+               'uploaded' => 'Harus ada gambar yang diupload!',
+               'mime_in' => 'File extention harus berupa *.jpg, *.jpeg, *.gif, *.png',
+               'max_size' => 'Ukuran file maksimal 2 MB'
             ]
          ]
       ])) {
          return redirect()->to('/data-penyakit/create')->withInput();
       }
 
+      $gambar = $this->request->getFile('gambar');
+      $filename = $gambar->getRandomName();
+
       //* save to database
       $this->PenyakitModel->save([
          'kode_penyakit' => $this->request->getVar('kode_penyakit'),
          'nama_penyakit' => $this->request->getVar('nama_penyakit'),
          'detail_penyakit' => $this->request->getVar('detail_penyakit'),
-         'gambar' => $this->request->getVar('gambar'),
+         'gambar' => $filename,
       ]);
+
+      $gambar->move('assets/images/uploaded/', $filename);
 
       // session()->setFlashdata('pesan', 'Data berhasil ditambahkan.');
 

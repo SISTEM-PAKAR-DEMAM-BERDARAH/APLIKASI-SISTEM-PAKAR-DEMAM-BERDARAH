@@ -35,7 +35,6 @@
                            <th>Username</th>
                            <th>Alamat</th>
                            <th>Status</th>
-                           <th>Lain-lain</th>
                         </tr>
                      </thead>
                      <tbody>
@@ -46,17 +45,6 @@
                            <td><?= $calldata['nama_user']; ?></td>
                            <td><?= $calldata['alamat']; ?></td>
                            <td><?= $calldata['level']; ?></td>
-                           <td>
-                              <div class="btn-group" role="group">
-                                 <button id="btnGroupVerticalDrop1" type="button" class="btn btn-dark btn-sm dropdown-toggle" data-bs-toggle="dropdown" -haspopup="true" aria-expanded="false">
-                                    Opsi <i class="mdi mdi-chevron-down"></i>
-                                 </button>
-                                 <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-                                    <a class="dropdown-item" href="#">Edit</a>
-                                    <a class="dropdown-item" href="#">Hapus</a>
-                                 </div>
-                              </div>
-                           </td>
                         </tr>
                         <?php endforeach ?>
                      </tbody>

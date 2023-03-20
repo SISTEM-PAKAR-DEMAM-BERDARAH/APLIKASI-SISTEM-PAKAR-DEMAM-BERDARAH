@@ -10,11 +10,11 @@
                         <h4 class="card-title">Tambah Penyakit</h4>
                         <p class="card-title-desc">Ini Form Penyakit</p>
 
-                        <form class="custom-validation" action="/data-penyakit/insert" method="post">
+                        <form class="custom-validation" action="/data-penyakit/insert" method="post" enctype="multipart/form-data">
                             <?= csrf_field() ?>
                             <div class="mb-3">
                                 <label for="kode_penyakit" class="form-label">Kode Penyakit</label></label>
-                                <input type="text" class="form-control" id="kode_penyakit" name="kode_penyakit" placeholder="D01" />
+                                <input type="text" class="form-control bg-light" id="kode_penyakit" name="kode_penyakit" value="<?= $autocode ?>" required />
                             </div>
                             <div class="mb-3">
                                 <label for="nama_penyakit" class="form-label">Nama Penyakit</label>
@@ -26,18 +26,9 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="detail_penyakit" class="form-label">Detail Penyakit</label>
-                                <div>
-                                    <input type="text" class="form-control <?= (validation_show_error('detail_penyakit')) ? 'is-invalid' : '' ?>" id="detail_penyakit" name="detail_penyakit" placeholder="Demam Berdarah adalah penyakit kena gigit nyamuk" />
-                                    <div class="invalid-feedback">
-                                        <?= validation_show_error('detail_penyakit') ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
                                 <label for="gambar" class="form-label">Gambar</label>
                                 <div>
-                                    <input type="text" class="form-control <?= (validation_show_error('gambar')) ? 'is-invalid' : '' ?>" id="gambar" name="gambar" placeholder="gambar.jpg" />
+                                    <input type="file" class="form-control <?= (validation_show_error('gambar')) ? 'is-invalid' : '' ?>" id="gambar" name="gambar" />
                                     <div class="invalid-feedback">
                                         <?= validation_show_error('gambar') ?>
                                     </div>

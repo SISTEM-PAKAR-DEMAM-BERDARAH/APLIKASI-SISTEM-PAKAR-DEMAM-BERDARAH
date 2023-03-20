@@ -43,7 +43,7 @@
                            <tr>
                               <td><?= $number++; ?></td>
                               <td><?= $calldata['kode_solusi']; ?></td>
-                              <td><?= $calldata['detail_solusi']; ?></td>
+                              <td><?= $calldata['nama_solusi']; ?></td>
                               <td><?= $calldata['nama_penyakit']; ?></td>
                               <td>
                                  <div class="btn-group" role="group">

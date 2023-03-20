@@ -111,65 +111,16 @@ body {
     margin-top: 8%;
 }
 
-.info {
-    margin-top: 7%;
-    width: 100%;
-}
-
-.info img {
-    width: 100%;
-    height: auto;
-}
-
-.content {
-    width: 100%;
-}
 
 .info .card {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
     background-color: #e9e9e9;
-    width: 23%;
     box-shadow: 13px 13px 31px 0px rgba(0,0,0,0.75);
     border-radius: 20px;
-    margin-bottom: 20px;
     
 }
 
 .info .card:hover {
     transform: scale(1.1);
     transition: all 0.5s ease-out;
-}
-
-.info .card img {
-    width: 150px;
-    height: auto;
-    margin: 0 auto;
-
-}
-
-.info .card p {
-    font-size: 15px;
-    text-align: center;
-}
-
-.info .card-body {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2%;
-    text-align: center; 
-    justify-content: left;
-}
-
-.info .pencegahan {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5%;
-    text-align: center; 
-    justify-content: center;
-    margin-bottom: 25px;
 }
 

@@ -9,10 +9,10 @@
             </div>
          </div>
         <div class="col-md-12">
-            <h1 class="fw-bold mt-4 text-center">Kontak Kami</h1>
+            <h1 class="fw-bold mt-4 ">Kontak Kami</h1>
         </div>
         <div class="div contact">
-            <ul class=" col-md-4 mx-auto list-unstyled col-sm-12">
+            <ul class=" col-md-4 list-unstyled col-sm-12">
                <li class="lead mt-2"><i class="bi bi-instagram">&nbsp; &nbsp; &nbsp;klinik_rahayumedika_bondowoso </i></li>
                <li class="lead mt-2"><i class="bi bi-whatsapp">&nbsp; &nbsp; &nbsp;+62813-3194-8337</i></li>
                <li class="lead mt-2"><i class="bi-telephone-plus-fill">&nbsp; &nbsp; &nbsp;(0332) 5556692</i></li>
@@ -23,4 +23,5 @@
 
 <div class="footer fst-italic p-2">
     <p class="text-center mt-2"> 2023 © Novita Sari. Website Sistem Pakar DBD(Demam Berdarah Dengue).</p>
+</div>
 <?= $this->endSection() ?>

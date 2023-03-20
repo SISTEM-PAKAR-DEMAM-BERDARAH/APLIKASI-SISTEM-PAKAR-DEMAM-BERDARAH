@@ -22,7 +22,9 @@
          </div>
       </div>
       <!-- end page title -->
-
+      <a href="/data-solusi/create" class="btn btn-primary waves-effect waves-light me-1 mb-3">
+         Tambah Solusi
+      </a>
       <div class="row">
          <div class="col-12">
             <div class="card">
@@ -43,7 +45,7 @@
                            <tr>
                               <td><?= $number++; ?></td>
                               <td><?= $calldata['kode_solusi']; ?></td>
-                              <td><?= $calldata['nama_solusi']; ?></td>
+                              <td><?= $calldata['detail_solusi']; ?></td>
                               <td><?= $calldata['nama_penyakit']; ?></td>
                               <td>
                                  <div class="btn-group" role="group">
@@ -51,8 +53,11 @@
                                        Opsi <i class="mdi mdi-chevron-down"></i>
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-                                       <a class="dropdown-item" href="#">Edit</a>
-                                       <a class="dropdown-item" href="#">Hapus</a>
+                                       <form action="/data-solusi/<?= $calldata['kode_solusi']; ?>" method="post" class="d-inline">
+                                          <?= csrf_field(); ?>
+                                          <input type="hidden" name="_method" value="DELETE">
+                                          <button type="submit" class="dropdown-item">Hapus</button>
+                                       </form>
                                     </div>
                                  </div>
                               </td>

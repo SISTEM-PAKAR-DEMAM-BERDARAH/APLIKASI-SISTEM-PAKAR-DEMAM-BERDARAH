@@ -68,7 +68,10 @@ $routes->post('/basis-pengetahuan/update/(:any)', [PengetahuanController::class,
 $routes->get('/basis-pengetahuan/edit/(:segment)', [PengetahuanController::class, 'edit/$1']);
 $routes->delete('/basis-pengetahuan/(:any)', [PengetahuanController::class, 'delete']);
 
-
+//! ROUTES SOLUSI
+$routes->get('/data-solusi/create', [SolusiController::class, 'create']);
+$routes->post('/data-solusi/insert', [SolusiController::class, 'insert']);
+$routes->delete('/data-solusi/(:any)', [SolusiController::class, 'delete']);
 
 //! USER
 $routes->get('/log-in', [LandingController::class, 'index']);

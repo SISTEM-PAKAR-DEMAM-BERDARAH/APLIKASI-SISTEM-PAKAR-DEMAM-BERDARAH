@@ -16,8 +16,8 @@ class Solusi extends Migration
                 'auto_increment' => false,
             ],
             'detail_solusi' => [
-                'type' => 'VARCHAR',
-                'constraint' => '150',
+                'type' => 'TEXT',
+                'null' => false,
             ],
             'kode_penyakit' => [
                 'type'       => 'VARCHAR',

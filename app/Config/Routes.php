@@ -46,6 +46,7 @@ $routes->get('/basis-pengetahuan', [PengetahuanController::class, 'index']);
 $routes->get('/data-gejala', [GejalaController::class, 'index']);
 $routes->get('/data-penyakit', [PenyakitController::class, 'index']);
 $routes->get('/data-solusi', [SolusiController::class, 'index']);
+$routes->get('/rules-base', [DashboardController::class, 'rules']);
 
 //! ROUTES PENYAKIT
 $routes->get('/data-penyakit/create', [PenyakitController::class, 'create']);

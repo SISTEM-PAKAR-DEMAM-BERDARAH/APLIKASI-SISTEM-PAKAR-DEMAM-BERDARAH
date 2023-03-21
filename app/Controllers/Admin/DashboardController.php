@@ -37,4 +37,8 @@ class DashboardController extends BaseController
       ];
       return view('/server-side/dashboard', $data);
    }
+
+   public function rules() {
+      return view('/server-side/rules-base');
+   }
 }

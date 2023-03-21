@@ -50,19 +50,14 @@
                               <td><?= $calldata['nama_gejala']; ?></td>
                               <td><strong><?= $calldata['cf_pakar']; ?></strong></td>
                               <td>
-                                 <div class="btn-group" role="group">
-                                    <button id="btnGroupVerticalDrop1" type="button" class="btn btn-dark btn-sm dropdown-toggle" data-bs-toggle="dropdown" -haspopup="true" aria-expanded="false">
-                                       Opsi <i class="mdi mdi-chevron-down"></i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-                                       <a class="dropdown-item" href="/basis-pengetahuan/edit/<?= $calldata['kode_pengetahuan'] ?>">Edit</a>
-                                       <form action="/basis-pengetahuan/<?= $calldata['kode_pengetahuan']; ?>" method="post" class="d-inline">
-                                          <?= csrf_field(); ?>
-                                          <input type="hidden" name="_method" value="DELETE">
-                                          <button type="submit" class="dropdown-item">Hapus</button>
-                                       </form>
-                                    </div>
-                                 </div>
+                                 <a href="/basis-pengetahuan/edit/<?= $calldata['kode_pengetahuan'] ?>" class="btn btn-info btn-sm" title="Edit data ini">
+                                    <span class="uil-edit"></span>
+                                 </a>
+                                 <form action="/basis-pengetahuan/<?= $calldata['kode_pengetahuan']; ?>" method="post" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')"><span class="uil-trash"></span></button>
+                                 </form>
                               </td>
                            </tr>
                         <?php endforeach ?>

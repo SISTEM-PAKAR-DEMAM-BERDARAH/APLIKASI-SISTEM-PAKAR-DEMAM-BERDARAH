@@ -13,5 +13,6 @@ class BaseSeeder extends Seeder
         $this->call('GejalaSeeder');
         $this->call('PenyakitSeeder');
         $this->call('SolusiSeeder');
+        $this->call('PengetahuanSeeder');
     }
 }

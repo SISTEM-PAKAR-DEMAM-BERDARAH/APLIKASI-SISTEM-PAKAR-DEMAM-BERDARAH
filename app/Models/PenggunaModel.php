@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class PenggunaModel extends Model
 {
    protected $table = 'users';
-   protected $primaryKey = 'kode_user';
+   protected $primaryKey = 'id';
 
    public function datapengguna() {
       return $this->findAll();

@@ -31,20 +31,16 @@
                      <thead>
                         <tr>
                            <th>#No</th>
-                           <th>Kode User</th>
+                           <th>Email</th>
                            <th>Username</th>
-                           <th>Alamat</th>
-                           <th>Status</th>
                         </tr>
                      </thead>
                      <tbody>
                         <?php $number = 1; foreach($datapengguna as $calldata) : ?>
                         <tr>
                            <td><?= $number++; ?></td>
-                           <td><?= $calldata['kode_user']; ?></td>
-                           <td><?= $calldata['nama_user']; ?></td>
-                           <td><?= $calldata['alamat']; ?></td>
-                           <td><?= $calldata['level']; ?></td>
+                           <td><?= $calldata['email']; ?></td>
+                           <td><?= $calldata['username']; ?></td>
                         </tr>
                         <?php endforeach ?>
                      </tbody>

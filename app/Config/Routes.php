@@ -39,50 +39,52 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-$routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
-});
-
 //! ADMIN
-$routes->get('/', [DashboardController::class, 'index']);
-$routes->get('/data-pengguna', [UsersController::class, 'index']);
-$routes->get('/basis-pengetahuan', [PengetahuanController::class, 'index']);
-$routes->get('/data-gejala', [GejalaController::class, 'index']);
-$routes->get('/data-penyakit', [PenyakitController::class, 'index']);
-$routes->get('/data-solusi', [SolusiController::class, 'index']);
-$routes->get('/rules-base', [DashboardController::class, 'rules']);
+$routes->get('/dashboard', [DashboardController::class, 'index'], ['filter' => 'role:admin']);
+//!RULES BASE
+$routes->get('/rules-base', [DashboardController::class, 'rules'], ['filter' => 'role:admin']);
+
+//! ROUTES PENGGUNA
+$routes->get('/data-pengguna', [UsersController::class, 'index'], ['filter' => 'role:admin']);
 
 //! ROUTES PENYAKIT
-$routes->get('/data-penyakit/create', [PenyakitController::class, 'create']);
-$routes->post('/data-penyakit/insert', [PenyakitController::class, 'insert']);
-$routes->post('/data-penyakit/update/(:any)', [PenyakitController::class, 'update/$1']);
-$routes->get('/data-penyakit/edit/(:segment)', [PenyakitController::class, 'edit/$1']);
-$routes->delete('/data-penyakit/(:any)', [PenyakitController::class, 'delete']);
+$routes->get('/data-penyakit', [PenyakitController::class, 'index'], ['filter' => 'role:admin']);
+$routes->get('/data-penyakit/create', [PenyakitController::class, 'create'], ['filter' => 'role:admin']);
+$routes->post('/data-penyakit/insert', [PenyakitController::class, 'insert'], ['filter' => 'role:admin']);
+$routes->post('/data-penyakit/update/(:any)', [PenyakitController::class, 'update/$1'], ['filter' => 'role:admin']);
+$routes->get('/data-penyakit/edit/(:segment)', [PenyakitController::class, 'edit/$1'], ['filter' => 'role:admin']);
+$routes->delete('/data-penyakit/(:any)', [PenyakitController::class, 'delete'], ['filter' => 'role:admin']);
 
 //! ROUTES GEJALA
-$routes->get('/data-gejala/create', [GejalaController::class, 'create']);
-$routes->post('/data-gejala/insert', [GejalaController::class, 'insert']);
-$routes->post('/data-gejala/update/(:any)', [GejalaController::class, 'update/$1']);
-$routes->get('/data-gejala/edit/(:segment)', [GejalaController::class, 'edit/$1']);
-$routes->delete('/data-gejala/(:any)', [GejalaController::class, 'delete']);
+$routes->get('/data-gejala', [GejalaController::class, 'index'], ['filter' => 'role:admin']);
+$routes->get('/data-gejala/create', [GejalaController::class, 'create'], ['filter' => 'role:admin']);
+$routes->post('/data-gejala/insert', [GejalaController::class, 'insert'], ['filter' => 'role:admin']);
+$routes->post('/data-gejala/update/(:any)', [GejalaController::class, 'update/$1'], ['filter' => 'role:admin']);
+$routes->get('/data-gejala/edit/(:segment)', [GejalaController::class, 'edit/$1'], ['filter' => 'role:admin']);
+$routes->delete('/data-gejala/(:any)', [GejalaController::class, 'delete'], ['filter' => 'role:admin']);
 
 //! ROUTES BASIS PENGETAHUAN
-$routes->get('/basis-pengetahuan/create', [PengetahuanController::class, 'create']);
-$routes->post('/basis-pengetahuan/insert', [PengetahuanController::class, 'insert']);
-$routes->post('/basis-pengetahuan/update/(:any)', [PengetahuanController::class, 'update/$1']);
-$routes->get('/basis-pengetahuan/edit/(:segment)', [PengetahuanController::class, 'edit/$1']);
-$routes->delete('/basis-pengetahuan/(:any)', [PengetahuanController::class, 'delete']);
+$routes->get('/basis-pengetahuan', [PengetahuanController::class, 'index'], ['filter' => 'role:admin']);
+$routes->get('/basis-pengetahuan/create', [PengetahuanController::class, 'create'], ['filter' => 'role:admin']);
+$routes->post('/basis-pengetahuan/insert', [PengetahuanController::class, 'insert'], ['filter' => 'role:admin']);
+$routes->post('/basis-pengetahuan/update/(:any)', [PengetahuanController::class, 'update/$1'], ['filter' => 'role:admin']);
+$routes->get('/basis-pengetahuan/edit/(:segment)', [PengetahuanController::class, 'edit/$1'], ['filter' => 'role:admin']);
+$routes->delete('/basis-pengetahuan/(:any)', [PengetahuanController::class, 'delete'], ['filter' => 'role:admin']);
 
 //! ROUTES SOLUSI
-$routes->get('/data-solusi/create', [SolusiController::class, 'create']);
-$routes->post('/data-solusi/insert', [SolusiController::class, 'insert']);
-$routes->delete('/data-solusi/(:any)', [SolusiController::class, 'delete']);
+$routes->get('/data-solusi', [SolusiController::class, 'index'], ['filter' => 'role:admin']);
+$routes->get('/data-solusi/create', [SolusiController::class, 'create'], ['filter' => 'role:admin']);
+$routes->post('/data-solusi/insert', [SolusiController::class, 'insert'], ['filter' => 'role:admin']);
+$routes->delete('/data-solusi/(:any)', [SolusiController::class, 'delete'], ['filter' => 'role:admin']);
+
 
 //! USER
+$routes->get('/diagnosa', [LandingController::class, 'diagnosa'], ['filter' => 'role:admin,user']);
+$routes->get('/input-nilai-diagnosa', [LandingController::class, 'diagnosa2'], ['filter' => 'role:admin,user']);
+
 $routes->get('/log-in', [LandingController::class, 'index']);
-$routes->get('/home', [LandingController::class, 'home']);
-$routes->get('/diagnosa', [LandingController::class, 'diagnosa']);
+$routes->get('/', [LandingController::class, 'home']);
 // $routes->get('/register', [LandingController::class, 'register']);
-$routes->get('/input-nilai-diagnosa', [LandingController::class, 'diagnosa2']);
 $routes->get('/info', [LandingController::class, 'info']);
 $routes->get('/kontak', [LandingController::class, 'kontak']);
 $routes->get('/tentang', [LandingController::class, 'tentang']);

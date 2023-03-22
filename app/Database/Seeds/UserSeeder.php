@@ -12,9 +12,10 @@ class UserSeeder extends Seeder
     public function run()
     {
         $data = [
-            'email' => 'admin@admin.com',
+            'email' => 'admin@gmail.com',
             'username' => 'Administrator',
-            'password_hash' => password_hash('admin', PASSWORD_DEFAULT),
+            //loginadmin
+            'password_hash' => '$2y$10$XT1Ty1rWnuMuHcrQ7BDm8.HnpOEywUQilLEb3BiTNGbqK1z.UIBKC',
             'active' => 1
         ];
 

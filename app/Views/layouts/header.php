@@ -1,7 +1,7 @@
 <div class="navbar-header">
    <div class="d-flex">
       <!-- LOGO -->
-      <a href="/">
+      <a href="/dashboard">
          <h2 style="color: white; margin-right: 1em;" class="mt-3">ADMIN SP-DBD</h2>
       </a>
 

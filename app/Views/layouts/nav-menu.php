@@ -4,7 +4,7 @@
          <div class="collapse navbar-collapse" id="topnav-menu-content">
             <ul class="navbar-nav mx-auto">
                <li class="nav-item">
-                  <a class="nav-link" href="/">
+                  <a class="nav-link" href="/dashboard">
                      <i class="uil-home-alt me-2"></i> Dashboard
                   </a>
                </li>

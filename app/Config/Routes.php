@@ -83,12 +83,13 @@ $routes->delete('/data-solusi/(:any)', [SolusiController::class, 'delete'], ['fi
 //! USER
 $routes->get('/diagnosa', [LandingController::class, 'diagnosa'], ['filter' => 'role:admin,user']);
 $routes->get('/input-nilai-diagnosa', [LandingController::class, 'diagnosa2'], ['filter' => 'role:admin,user']);
+$routes->get('/edit', [LandingController::class, 'edit'], ['filter' => 'role:admin,user']);
 $routes->get('/', [LandingController::class, 'home']);
 // $routes->get('/register', [LandingController::class, 'register']);
 $routes->get('/info', [LandingController::class, 'info']);
 $routes->get('/kontak', [LandingController::class, 'kontak']);
 $routes->get('/tentang', [LandingController::class, 'tentang']);
-$routes->get('/edit', [LandingController::class, 'edit']);
+
 
 /*
  * --------------------------------------------------------------------

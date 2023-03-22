@@ -10,5 +10,8 @@ class BaseSeeder extends Seeder
     {
         $this->call('RolesSeeder');
         $this->call('UserSeeder');
+        $this->call('GejalaSeeder');
+        $this->call('PenyakitSeeder');
+        $this->call('SolusiSeeder');
     }
 }

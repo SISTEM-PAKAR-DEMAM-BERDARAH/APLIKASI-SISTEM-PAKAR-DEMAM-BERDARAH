@@ -58,7 +58,7 @@
 					<hr>
 
 <?php if ($config->allowRegistration) : ?>
-					<p>Belum punya akun? Ayo<a href="<?= url_to('register') ?>"> <strong>Daftar</strong></a></p>
+					<p>Belum punya akun? Ayo <a href="<?= url_to('register') ?>"><strong>Daftar</strong></a></p>
 <?php endif; ?>
 				</div>
 			</div>

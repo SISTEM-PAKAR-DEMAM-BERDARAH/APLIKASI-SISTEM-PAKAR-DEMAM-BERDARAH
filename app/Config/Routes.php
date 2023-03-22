@@ -78,12 +78,11 @@ $routes->delete('/data-solusi/(:any)', [SolusiController::class, 'delete']);
 $routes->get('/log-in', [LandingController::class, 'index']);
 $routes->get('/home', [LandingController::class, 'home']);
 $routes->get('/diagnosa', [LandingController::class, 'diagnosa']);
-$routes->get('/register', [LandingController::class, 'register']);
+// $routes->get('/register', [LandingController::class, 'register']);
 $routes->get('/input-nilai-diagnosa', [LandingController::class, 'diagnosa2']);
 $routes->get('/info', [LandingController::class, 'info']);
 $routes->get('/kontak', [LandingController::class, 'kontak']);
 $routes->get('/tentang', [LandingController::class, 'tentang']);
-
 $routes->get('/edit', [LandingController::class, 'edit']);
 
 /*

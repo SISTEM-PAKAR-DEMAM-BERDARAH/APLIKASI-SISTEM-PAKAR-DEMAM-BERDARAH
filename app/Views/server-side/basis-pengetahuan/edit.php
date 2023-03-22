@@ -7,8 +7,8 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Tambah Pengetahuan</h4>
-                        <p class="card-title-desc">Ini Form Pengetahuan</p>
+                        <h4 class="card-title">Update Pengetahuan</h4>
+                        <p class="card-title-desc">Form Update Pengetahuan</p>
                         <form class="custom-validation" action="/basis-pengetahuan/update/<?= $pengetahuan['kode_pengetahuan'] ?>" method="post">
                             <?= csrf_field() ?>
                             <div class="mb-3">

@@ -1,7 +1,7 @@
 <div class="navbar-header">
    <div class="d-flex">
       <!-- LOGO -->
-      <a href="/dashboard">
+      <a href="<?= base_url('/dashboard') ?>">
          <h2 style="color: white; margin-right: 1em;" class="mt-3">ADMIN SP-DBD</h2>
       </a>
 
@@ -73,7 +73,7 @@
          </button>
          <div class="dropdown-menu dropdown-menu-end">
             <!-- item-->
-            <a class="dropdown-item" href="<?= base_url() ?>/logout"><i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Logout</span></a>
+            <a class="dropdown-item" href="<?= base_url('/logout') ?>"><i class="uil uil-sign-out-alt font-size-18 align-middle me-1 text-muted"></i> <span class="align-middle">Logout</span></a>
          </div>
       </div>
    </div>

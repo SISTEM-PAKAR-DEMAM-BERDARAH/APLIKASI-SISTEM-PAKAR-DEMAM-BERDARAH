@@ -7,33 +7,44 @@
     <div class="collapse navbar-collapse" id="btn">
       <ul class="navbar-nav ms-auto nav-pills">
         <li class="nav-item">
-          <a href="/" class="nav-link">Home</a>
+          <a href="<?= base_url('/') ?>" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          <a href="/diagnosa" class="nav-link">Diagnosa</a>
+          <a href="<?= base_url('/diagnosa') ?>" class="nav-link">Diagnosa</a>
         </li>
         <li class="nav-item">
-          <a href="/info" class="nav-link">Info</a>
+          <a href="<?= base_url('/info') ?>" class="nav-link">Info</a>
         </li>
         <li class="nav-item">
-          <a href="/kontak" class="nav-link">Kontak</a>
+          <a href="<?= base_url('/kontak') ?>" class="nav-link">Kontak</a>
         </li>
         <li class="nav-item">
-          <a href="/tentang" class="nav-link">Tentang</a>
+          <a href="<?= base_url('/tentang') ?>" class="nav-link">Tentang</a>
         </li>
-        <?php if(logged_in()) : ?>
-        <li class="nav-item dropdown username">         
-            <a class="nav-link dropdown-toggle" href="/logout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <?php if (logged_in()) : ?>
+          <li class="nav-item dropdown username">
+            <a class="nav-link dropdown-toggle" href="<?= base_url('/logout') ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <?= user()->username ?>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/edit">Ubah Password</a></li>
-            <hr class="dropdown-divider">
-            <li><a class="dropdown-item" href="/logout">Logout</a></li>
-            <?php else :  ?>
-        <a href="/login" class="nav-link cek">Login</a>
-            <?php endif ;?>
-        </li>
+            </a>
+            <?php if (in_groups('admin')) : ?>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="<?= base_url('/dashboard') ?>">Dashboard</a></li>
+                <hr class="dropdown-divider">
+                <li><a class="dropdown-item" href="<?= base_url('/edit') ?>">Ubah Password</a></li>
+                <hr class="dropdown-divider">
+                <li><a class="dropdown-item" href="<?= base_url('/logout') ?>">Logout</a></li>
+              <?php endif; ?>
+              <?php if (in_groups('user')) : ?>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="<?= base_url('/edit') ?>">Ubah Password</a></li>
+                  <hr class="dropdown-divider">
+                  <li><a class="dropdown-item" href="<?= base_url('/logout') ?>">Logout</a></li>
+                <?php endif; ?>
+
+              <?php else :  ?>
+                <a href="<?= base_url('/login') ?>" class="nav-link cek">Login</a>
+              <?php endif; ?>
+          </li>
       </ul>
     </div>
   </div>

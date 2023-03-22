@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Tambah Gejala</h4>
-                        <p class="card-title-desc">Ini Form Gejala</p>
+                        <p class="card-title-desc">Form Input Gejala</p>
                         <form class="custom-validation" action="/data-gejala/insert" method="post">
                             <?= csrf_field() ?>
                             <div class="mb-3">

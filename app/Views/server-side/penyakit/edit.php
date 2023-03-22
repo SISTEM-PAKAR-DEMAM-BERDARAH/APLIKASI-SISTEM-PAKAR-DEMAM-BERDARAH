@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Update Penyakit</h4>
-                        <p class="card-title-desc">Ini Form Penyakit</p>
+                        <p class="card-title-desc">Form Update Penyakit</p>
 
                         <form class="custom-validation" action="/data-penyakit/update/<?= $penyakit['kode_penyakit'] ?>" method="post">
                             <?= csrf_field() ?>

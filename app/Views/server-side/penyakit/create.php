@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Tambah Penyakit</h4>
-                        <p class="card-title-desc">Ini Form Penyakit</p>
+                        <p class="card-title-desc">Form Input Penyakit</p>
 
                         <form class="custom-validation" action="/data-penyakit/insert" method="post" enctype="multipart/form-data">
                             <?= csrf_field() ?>

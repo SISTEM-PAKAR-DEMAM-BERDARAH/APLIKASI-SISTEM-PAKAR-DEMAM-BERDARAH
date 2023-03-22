@@ -43,16 +43,11 @@
                                 <label for="pakar" class="form-label">CF Pakar</label>
                                 <select class="form-control <?= (validation_show_error('cf_pakar')) ? 'is-invalid' : '' ?> select2" name="cf_pakar">
                                     <option value="">Select</option>
-                                    <option value="0.1">0.1</option>
-                                    <option value="0.2">0.2</option>
-                                    <option value="0.3">0.3</option>
-                                    <option value="0.4">0.4</option>
-                                    <option value="0.5">0.5</option>
-                                    <option value="0.6">0.6</option>
-                                    <option value="0.7">0.7</option>
-                                    <option value="0.8">0.8</option>
-                                    <option value="0.9">0.9</option>
-                                    <option value="1">1</option>
+                                    <option value="0.2">Tidak Tahu (0.2)</option>
+                                    <option value="0.4">Sedikit Yakin (0.4)</option>
+                                    <option value="0.6">Cukup Yakin (0.6)</option>
+                                    <option value="0.8">Yakin (0.8)</option>
+                                    <option value="1">Sangat Yakin (1)</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     <?= validation_show_error('cf_pakar') ?>

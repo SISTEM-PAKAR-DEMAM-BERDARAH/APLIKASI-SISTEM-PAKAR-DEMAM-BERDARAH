@@ -48,18 +48,11 @@
                               <td><?= $calldata['detail_solusi']; ?></td>
                               <td><?= $calldata['nama_penyakit']; ?></td>
                               <td>
-                                 <div class="btn-group" role="group">
-                                    <button id="btnGroupVerticalDrop1" type="button" class="btn btn-dark btn-sm dropdown-toggle" data-bs-toggle="dropdown" -haspopup="true" aria-expanded="false">
-                                       Opsi <i class="mdi mdi-chevron-down"></i>
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-                                       <form action="/data-solusi/<?= $calldata['kode_solusi']; ?>" method="post" class="d-inline">
-                                          <?= csrf_field(); ?>
-                                          <input type="hidden" name="_method" value="DELETE">
-                                          <button type="submit" class="dropdown-item">Hapus</button>
-                                       </form>
-                                    </div>
-                                 </div>
+                                 <form action="/data-solusi/<?= $calldata['kode_solusi']; ?>" method="post" class="d-inline">
+                                    <?= csrf_field(); ?>
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')"><span class="uil-trash"></span></button>
+                                 </form>
                               </td>
                            </tr>
                         <?php endforeach ?>

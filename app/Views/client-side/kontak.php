@@ -13,8 +13,9 @@
         </div>
         <div class="mb-5">
             <ul class=" col-md-4 list-unstyled col-sm-12 ">
-               <li class="lead mt-2"><i class="bi bi-instagram">&nbsp; &nbsp; &nbsp;klinik_rahayumedika_bondowoso </i></li>
-               <li class="lead mt-2"><i class="bi bi-whatsapp">&nbsp; &nbsp; &nbsp;+62813-3194-8337</i></li>
+                
+               <li class="lead mt-2"><i class="bi bi-instagram text-danger">&nbsp; &nbsp; &nbsp;<span class="text-black fw-bold">klinik_rahayumedika_bondowoso</span></i></li>
+               <li class="lead mt-2"><i class="bi bi-whatsapp text-success">&nbsp; &nbsp; &nbsp; <span class="text-black">+62813-3194-8337</span></i></li>
                <li class="lead mt-2"><i class="bi-telephone-plus-fill">&nbsp; &nbsp; &nbsp;(0332) 5556692</i></li>
             </ul>
         </div>

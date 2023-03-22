@@ -3,14 +3,13 @@
 <?= $this->section('content') ?>
 <div class="container">
   <div class="row">
-    <div class="col-md-12 mt-5">
+    <div class="col-md-12 mt-5 mb-5">
       <form action="input-nilai-diagnosa" method="get">
         <div class="card text-center mb-5 border-0 mt-5 ">
           <div class="card-header p-3">
             <h1 class="text-center fw-bold">DIAGNOSA</h1>
             <h5 class="text-center">Pilihlah gejala sesuai yang anda rasakan !</h5>
           </div>
-          <form action="input-nilai-diagnosa" method="get">
           <div class="card-body">
             <table class="table text-center">
               <thead>
@@ -25,9 +24,9 @@
                   foreach ($datagejala as $calldata) : ?>
                       <tr>
                         <td><?= $number++; ?></td>
-                        <td><?= $calldata['nama_gejala']; ?></td>
+                        <td><?= $calldata['nama_gejala']; ?></td>                   
                         <td>
-                          <input type="checkbox" value="<?= $calldata['kode_gejala']; ?>" name="gejala[]" id="">
+                          <input type="checkbox" value="<?= $calldata['kode_gejala'];?>" name="gejala[]" id="">
                         </td>
                       </tr>
                   <?php endforeach ?>
@@ -41,14 +40,13 @@
               </a> 
             </button>
           </div>
-          </form>
         </div>
       </form>
     </div>
   </div>
 </div>
 
-<div class="footer fst-italic p-2">
+<div class="footer fst-italic p-2 mt-5">
   <p class="text-center mt-2"> 2023 © Novita Sari. Website Sistem Pakar DBD(Demam Berdarah Dengue).</p>
 </div>
 <?= $this->endSection() ?>

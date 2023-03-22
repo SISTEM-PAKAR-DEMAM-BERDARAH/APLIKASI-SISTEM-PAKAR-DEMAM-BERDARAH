@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 fixed-top">
   <div class="container-fluid">
-    <a href="" class="navbar-brand ms-5 fw-bold"> SP - DBD</a>
+    <a href="" class="navbar-brand fw-bold"> SP - DBD</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#btn">
       <i class="bx bx-menu"></i>
     </button>
@@ -21,17 +21,18 @@
         <li class="nav-item">
           <a href="/tentang" class="nav-link">Tentang</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Username
+        <?php if(logged_in()) : ?>
+        <li class="nav-item dropdown username">         
+            <a class="nav-link dropdown-toggle" href="/logout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <?= user()->username ?>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/edit">Ubah Password</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="log-in">Logout</a></li>
-          </ul>
+            <hr class="dropdown-divider">
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+            <?php else :  ?>
+        <a href="/login" class="nav-link cek">Login</a>
+            <?php endif ;?>
         </li>
       </ul>
     </div>

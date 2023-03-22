@@ -18,6 +18,9 @@ body {
     color: white;
 }
 
+.username {
+   margin-right: 30px;
+}
 .nav-link:hover{
     color: #F5F5F5;
     text-decoration: none;
@@ -90,14 +93,11 @@ body {
     transition: all 0.5s ease-out;
 }
 
-.tentang img {
+/* .tentang img {
     width: 65%;
     margin-top: -35%;
     margin-left: -18%;
-
-
-
-}
+} */
 
 .tentang .card {
     background-color: #e9e9e9;
@@ -115,3 +115,4 @@ iframe:hover {
     transform: scale(1.1);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+

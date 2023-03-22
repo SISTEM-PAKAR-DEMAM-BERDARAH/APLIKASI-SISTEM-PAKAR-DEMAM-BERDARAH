@@ -4,7 +4,7 @@
       <!-- Content -->
       <div class="container">
   <div class="row">
-    <div class="col-md-12 mt-5">
+    <div class="col-md-12 mt-5 mb-5">
       <form action="" method="get">
         <div class="card text-center mb-5 border-0 mt-5">
           <div class="card-header p-3 bg-transparent">
@@ -24,28 +24,29 @@
            
               <tbody>
                 <?php 
-                  $numbtable = 1;
-                  $hasil = $_GET['gejala'];
-                  for ($i = 0; $i < count($hasil); $i++) {
-                    ?>
-                    <tr>
-                      <td><?= $numbtable++ ?></td>
-                      <td><?= $hasil[$i] ?></td>
-                      <td>Nama Gejala</td>
-                      <td>
-                        <select class="form-select" name="nilai_keyakinan" required autofocus>
-                          <option value="">- Pilih nilai keyakinan -</option>
-                          <option value="0.2">Tidak Tahu</option>
-                          <option value="0.4">Yakin</option>
-                          <option value="0.6">Cukup Yakin</option>
-                          <option value="0.8">Yakin</option>
-                          <option value="1">Sangat Yakin</option>
-                        </select>
-                      </td>
-                    </tr>
-                    <?php
-                  }
-                ?>
+                $numbtable = 1;
+                $hasil = $_GET['gejala'] ;
+
+                for ($i = 0; $i < count($hasil); $i++) {
+                  ?>
+                  <tr>
+                    <td><?= $numbtable++ ?></td>
+                    <td><?= $hasil[$i] ?></td>
+                    <td>nama gejala</td>
+                    <td width="20%">
+                      <select class="form-select" name="nilai_keyakinan" required autofocus>
+                        <option value="">- Pilih nilai keyakinan -</option>
+                        <option value="0.2">Tidak Tahu</option>
+                        <option value="0.4">Yakin</option>
+                        <option value="0.6">Cukup Yakin</option>
+                        <option value="0.8">Yakin</option>
+                        <option value="1">Sangat Yakin</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <?php
+                }
+                  ?>
               </tbody>
             </table>
           </div>
@@ -62,7 +63,7 @@
   </div>
 </div>
 
-<div class="footer fst-italic p-2">
+<div class="footer fst-italic p-2 mt-5">
   <p class="text-center mt-2"> 2023 © Novita Sari. Website Sistem Pakar DBD(Demam Berdarah Dengue).</p>
 </div>
    <!-- End Content -->

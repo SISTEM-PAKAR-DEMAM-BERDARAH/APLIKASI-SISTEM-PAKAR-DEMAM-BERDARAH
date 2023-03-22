@@ -18,11 +18,20 @@
                   <td>No</td>
                   <td>Kode</td>
                   <td>Nama Gejala</td>
-                  <td>Pilih Gejala</td>
+                  <td>Nilai Keyakinan</td>
               </tr>
               </thead>
+           
               <tbody>
-              
+                <?php 
+                $number = 1;
+                $hasil = $_GET['gejala'];
+               for ($i = 0; $i < count($hasil); $i++) {
+                echo "<tr>
+                <td> $hasil[$i]<td>
+                </tr>";
+                }
+                ?>
               </tbody>
             </table>
           </div>

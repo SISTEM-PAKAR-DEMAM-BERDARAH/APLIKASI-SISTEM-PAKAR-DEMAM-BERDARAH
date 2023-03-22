@@ -4,12 +4,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 mt-5">
-      <form action="diagnosa2" method="get">
+      <form action="input-nilai-diagnosa" method="get">
         <div class="card text-center mb-5 border-0 mt-5 ">
           <div class="card-header p-3">
             <h1 class="text-center fw-bold">DIAGNOSA</h1>
             <h5 class="text-center">Pilihlah gejala sesuai yang anda rasakan !</h5>
           </div>
+          <form action="input-nilai-diagnosa" method="get">
           <div class="card-body">
             <table class="table text-center">
               <thead>
@@ -26,7 +27,7 @@
                         <td><?= $number++; ?></td>
                         <td><?= $calldata['nama_gejala']; ?></td>
                         <td>
-                          <input type="checkbox" value="<?= $calldata['nama_gejala']; ?>" name="gejala" id="">
+                          <input type="checkbox" value="<?= $calldata['kode_gejala']; ?>" name="gejala[]" id="">
                         </td>
                       </tr>
                   <?php endforeach ?>
@@ -35,11 +36,12 @@
           </div>
           <div class="card-footer p-3 border-0 bg-transparent">
             <button class="btn btn-danger float-end" type="submit">
-              <a href="input-nilai-diagnosa" class="text-decoration-none text-white">  
+              <a class="text-decoration-none text-white">  
                 Next ➜
               </a> 
             </button>
           </div>
+          </form>
         </div>
       </form>
     </div>

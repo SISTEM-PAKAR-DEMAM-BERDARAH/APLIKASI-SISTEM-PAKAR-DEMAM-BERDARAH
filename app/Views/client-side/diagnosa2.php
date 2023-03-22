@@ -24,13 +24,27 @@
            
               <tbody>
                 <?php 
-                $number = 1;
-                $hasil = $_GET['gejala'];
-               for ($i = 0; $i < count($hasil); $i++) {
-                echo "<tr>
-                <td> $hasil[$i]<td>
-                </tr>";
-                }
+                  $numbtable = 1;
+                  $hasil = $_GET['gejala'];
+                  for ($i = 0; $i < count($hasil); $i++) {
+                    ?>
+                    <tr>
+                      <td><?= $numbtable++ ?></td>
+                      <td><?= $hasil[$i] ?></td>
+                      <td>Nama Gejala</td>
+                      <td>
+                        <select class="form-select" name="nilai_keyakinan" required autofocus>
+                          <option value="">- Pilih nilai keyakinan -</option>
+                          <option value="0.2">Tidak Tahu</option>
+                          <option value="0.4">Yakin</option>
+                          <option value="0.6">Cukup Yakin</option>
+                          <option value="0.8">Yakin</option>
+                          <option value="1">Sangat Yakin</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <?php
+                  }
                 ?>
               </tbody>
             </table>

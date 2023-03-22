@@ -2,16 +2,16 @@
 
 namespace App\Controllers\User;
 use App\Controllers\BaseController;
-use App\Models\GejalaModel;
+use App\Models\PengetahuanModel;
 
 
 class LandingController extends BaseController
 {
-   protected $GejalaModel;
+   protected $PengetahuanModel;
 
    public function __construct()
    {
-      $this->GejalaModel = new GejalaModel();
+      $this->PengetahuanModel = new PengetahuanModel();
    }
 
    public function register ()
@@ -31,7 +31,8 @@ class LandingController extends BaseController
    public function diagnosa()
    {
       $data = [
-         'datagejala' => $this->GejalaModel->datagejala()
+         'basisgejala' => $this->PengetahuanModel->dataForDiagnosa(),
+         'basispakar' => $this->PengetahuanModel->dataDiagnosaPakar()
       ];
       return view('/client-side/diagnosa', $data);
    }

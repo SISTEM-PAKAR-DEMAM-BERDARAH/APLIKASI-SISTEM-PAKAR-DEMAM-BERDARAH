@@ -40,4 +40,12 @@ class PengetahuanModel extends Model
    {
       return $this->table('basis_pengetahuan')->join('gejala', 'gejala.kode_gejala = basis_pengetahuan.kode_gejala', 'inner')->where(['kode_pengetahuan' => $id])->first();
    }
+
+   public function dataForDiagnosa() {
+      return $this->db->table('basis_pengetahuan')->select('basis_pengetahuan.kode_gejala, gejala.*')->join('gejala', 'gejala.kode_gejala = basis_pengetahuan.kode_gejala', 'inner')->groupBy('basis_pengetahuan.kode_gejala')->get()->getResultArray();
+   }
+
+   public function dataDiagnosaPakar() {
+      return $this->db->table('basis_pengetahuan')->select('*')->get()->getResultArray();
+   }
 }

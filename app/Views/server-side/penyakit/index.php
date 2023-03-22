@@ -47,7 +47,9 @@
                                  <td><?= $number++; ?></td>
                                  <td><?= $calldata['kode_penyakit']; ?></td>
                                  <td><?= $calldata['nama_penyakit']; ?></td>
-                                 <td><?= $calldata['gambar']; ?></td>
+                                 <td>
+                                    <img src="assets/images/penyakit-seeder/<?= $calldata['gambar']; ?>" width="100%">
+                                 </td>
                                  <td>
                                     <a href="/data-penyakit/edit/<?= $calldata['kode_penyakit'] ?>" class="btn btn-info btn-sm" title="Edit data ini">
                                        <span class="uil-edit"></span>

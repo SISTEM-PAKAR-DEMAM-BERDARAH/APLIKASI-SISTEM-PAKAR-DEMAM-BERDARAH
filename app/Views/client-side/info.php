@@ -83,8 +83,8 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
                             <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#dd" aria-expanded="false" aria-controls="dd"> Demam Dengue </button>
                         </p>
                         <div class="collapse" id="dd">
-                            <p class="text-start"> 
-                                Demam Dengue merupakan akibat paling ringan yang ditimbulkan virus dengue. Gejalanya cenderung ringan dan tanpa ada tanda-tanda pendarahan seperti demam, nyeri kepala, mual dan juga ruam di sekujur tubuh.
+                            <p class="text-center"> 
+                                 <span class="fw-bold fst-italic"> Demam Dengue </span>merupakan akibat paling ringan yang ditimbulkan virus dengue. Gejalanya cenderung ringan dan tanpa ada tanda-tanda pendarahan seperti demam, nyeri kepala, mual dan juga ruam di sekujur tubuh.
                             </p>
                         </div>
                 </div>
@@ -97,22 +97,22 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
                             <button class="btn btn-primary justify-content-center  mx-auto mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#dbd" aria-expanded="false" aria-controls="dbd"> Demam Berdarah Dengue </button>
                         </p>
                     <div class="collapse" id="dbd">
-                        <p class="text-start">
-                            Demam Berdarah Dengue (DBD) merupakan akibat sedang dengan gejala berat yang memiliki tanda-tanda pendarahan seperti mimisan atau tinja yang berwarna merah.Pada fase ini, trombosit mengalami penurunan hingga 40.000 – 100.000 per mikroliter darah. Dengan trombosit normal biasanya 150.000 per mikroliter darah.
+                        <p class="text-center">
+                           <span class="fw-bold fst-italic"> Demam Berdarah Dengue (DBD) </span> merupakan akibat sedang dengan gejala berat yang memiliki tanda-tanda pendarahan seperti mimisan atau tinja yang berwarna merah.Pada fase ini, trombosit mengalami penurunan hingga 40.000 – 100.000 per mikroliter darah. Dengan trombosit normal biasanya 150.000 per mikroliter darah.
                         </p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3 mb-5 mt-4 mx-auto">
-                <div class="card p-4 text-center">
+                <div class="card p-4">
                     <img src="user-assets/images/ssd.png" alt="" class="rounded-circle mx-auto" width="120px">
                         <p class="text-center">
                             <button class="btn btn-primary mx-auto mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#ssd" aria-expanded="false" aria-controls="ssd"> Syok Syndrome Dengue </button>
                         </p>
                     <div class="collapse" id="ssd">
-                    <p class="text-start">
-                    Syok Syndrome Dengue (SSD) merupakan keadaan yang paling parah yang disebabkan oleh virus dengue. Keadaan ini dapat mengakibatkan syok dan pasien akan mengalami fase komplikasi. Jika tidak segera ditangani, maka komplikasi ini akan mengakibatkan syok yang berisiko kematian. Ciri utamanya adalah trombosit menurun hingga dibawah 40.000 per mikroliter darah. Serta merasakan nyeri ulu hati dan kehilangan kesadaran.
+                    <p align="center">
+                     <span class="fw-bold fst-italic"> Syok Syndrome Dengue (SSD) </span>merupakan keadaan yang paling parah yang disebabkan oleh virus dengue. Keadaan ini dapat mengakibatkan syok dan pasien akan mengalami fase komplikasi. Jika tidak segera ditangani, maka komplikasi ini akan mengakibatkan syok yang berisiko kematian. Ciri utamanya adalah trombosit menurun hingga dibawah 40.000 per mikroliter darah. Serta merasakan nyeri ulu hati dan kehilangan kesadaran.
                         </p>
                     </div>
                 </div>

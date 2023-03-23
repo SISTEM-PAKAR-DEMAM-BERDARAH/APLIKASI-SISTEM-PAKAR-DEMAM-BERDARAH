@@ -39,8 +39,10 @@
                       document.getElementById("<?= $basisgejala['kode_gejala'] ?>").addEventListener('change', function() {
                         if (this.checked) {
                           document.getElementById("<?= $basisgejala['nama_gejala'] ?>").setAttribute('checked', 'checked');
+                          document.querySelector('.btn-danger').removeAttribute('disabled');
                         } else {
                           document.getElementById("<?= $basisgejala['nama_gejala'] ?>").removeAttribute('checked');
+                          document.querySelector('.btn-danger').setAttribute('disabled', '');
                         }
                       });
                     </script>
@@ -51,7 +53,7 @@
               </table>
             </div>
             <div class="card-footer p-3 border-0 bg-transparent">
-              <button class="btn btn-danger float-end" type="submit">
+              <button class="btn btn-danger float-end" type="submit" disabled>
                 <a class="text-decoration-none text-white">
                   Next ➜
                 </a>

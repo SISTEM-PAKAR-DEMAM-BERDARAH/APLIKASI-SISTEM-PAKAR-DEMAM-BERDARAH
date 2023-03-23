@@ -8,7 +8,7 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-md-9 mt-5">
+            <div class="col-6 col-sm-7 col-md-7 mt-5  col-lg-9 col-xl-9">
                 <h3>Ciri – ciri nyamuk aedes aegypty</h3>
                 <ul>
                     <li>Berwarna hitam dengan belang putih. Saat sudah banyak menghisap darah, bagian perut nyamuk ini menjadi berwarna merah penuh berisi darah.</li>
@@ -18,7 +18,7 @@
                     <li>Nyamuk sering hinggap di pakaian yang tergantung di kamar</li>
                 </ul>
             </div>
-            <div class="col-md-3">
+            <div class="col-5  col-sm-5 col-md-5  col-lg-3 col-xl-3">
             <img src="user-assets/images/nyamuk.png" alt="" class="mx-auto mt-4" width="100%">
             </div>
         </div>
@@ -27,32 +27,32 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-5  col-sm-5 col-md-4  col-lg-4 col-xl-3">
                 <img src="user-assets/images/nyamuk2.png" alt="" class="mx-auto mt-4" width="100%">
             </div>
-            <div class="col-md-9 mt-5">
+            <div class="col-7  col-sm-7 col-md-8  col-lg-8 col-xl-9">
                 <h3 class="text-center fw-bold">Cara Pencegahan</h3>
                 <p>Cara tepat untuk mencegah perkembangan nyamuk Aedes Aegypti adalah dengan menerapkan 3M Plus. dan 3M yang dimaksud yaitu :</p>
                 <div class="row">
-                    <div class="card col-md-3 mx-auto">
+                    <div class="card col-9 mb-4 col-sm-8 col-md-7  col-lg-7  col-xl-3 mx-auto">
                         <img src="user-assets/images/menutup.png" alt="" class="rounded-circle mx-auto p-2" width="160px">
                         <p class="text-center">Menutup rapat tempat penyimpanan air</p>
                     </div>
-                    <div class="card col-md-3 mx-auto">
+                    <div class="card col-9 mb-4 col-sm-8 col-md-7  col-lg-7 col-xl-3 mx-auto">
                         <img src="user-assets/images/menguras.png" alt="" class="rounded-circle mx-auto p-2" width="160px">
                         <p class="text-center">Menguras tempat air secara rutin, setidaknya seminggu sekali</p>
                     </div>
-                    <div class="card col-md-3 mx-auto">
+                    <div class="card col-9 mb-4 col-sm-8 col-md-7  col-lg-7 col-xl-3 mx-auto">
                         <img src="user-assets/images/mengubur.png" alt="" class="rounded-circle mx-auto" width="200px">
                         <p class="text-center">Mengubur atau mendaur ulang barang bekas yang dapat menyebabkan air menggenang</p>
                     </div>
                 </div>
             </div>  
-            <div class="col-md-12 mt-5">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
                 <p>Sedangkan, Plus merupakan tindakan pencegahan tambahan guna mencegah
 penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p>
             </div>   
-            <div class="col-md-5">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-5">
                 <ul>
                     <li>Melakukan Fogging</li>
                     <li>Memasang kawat anti nyamuk di jendela dan pintu rumah</li>
@@ -60,7 +60,7 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
                     <li>Menanam tanaman pengusir nyamuk</li>
                 </ul>
             </div>
-            <div class="col-md-7">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-7">
                 <ul>
                     <li>Menggunakan kelambu saat tidur</li>
                     <li>Memelihara ikan pemakan jentik nyamuk</li>
@@ -76,7 +76,7 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
     <div class="container">
         <h3 class="text-center fw-bold">Detail Penyakit</h3>      
         <div class="row">
-            <div class="col-md-3 mb-5 mt-4 mx-auto ">
+            <div class="col-8 col-md-6 col-lg-4 col-xl-3 mb-5 mt-4 mx-auto ">
                 <div class="card p-4 text-center">
                     <img src="user-assets/images/dd.png" alt="" class="rounded-circle mx-auto" width="120px">
                         <p>
@@ -90,7 +90,7 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
                 </div>
             </div>
 
-            <div class="col-md-3 mb-5 mt-4 mx-auto">
+            <div class="col-8 col-md-6 col-lg-4 col-xl-3 mb-5 mt-4 mx-auto">
                 <div class="card p-4 text-center">
                     <img src="user-assets/images/dbd.png" alt="" class="rounded-circle mx-auto" width="120px">
                         <p>
@@ -104,7 +104,7 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
                 </div>
             </div>
 
-            <div class="col-md-3 mb-5 mt-4 mx-auto">
+            <div class="col-8 col-sm-9 col-md-6 col-lg-4 col-xl-3 mb-5 mt-4 mx-auto">
                 <div class="card p-4">
                     <img src="user-assets/images/ssd.png" alt="" class="rounded-circle mx-auto" width="120px">
                         <p class="text-center">

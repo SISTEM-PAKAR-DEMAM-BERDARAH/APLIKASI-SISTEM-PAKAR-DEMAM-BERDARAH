@@ -18,6 +18,7 @@
                     <td>No</td>
                     <td>Nama Gejala</td>
                     <td>Pilih Gejala</td>
+                    <td width = "25%">Nilai Keyakinan</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -32,6 +33,7 @@
                             <input type='checkbox' value='$basisgejala[kode_gejala]' name='kode_gejala[]' id='$basisgejala[kode_gejala]'>
                             <input type='checkbox' value='$basisgejala[nama_gejala]' name='nama_gejala[]' id='$basisgejala[nama_gejala]' hidden>
                           </td>
+                          <td id='keyakinan-$basisgejala[kode_gejala]'>-</td>
                         </tr>
                       ";
                   ?>
@@ -39,9 +41,20 @@
                       document.getElementById("<?= $basisgejala['kode_gejala'] ?>").addEventListener('change', function() {
                         if (this.checked) {
                           document.getElementById("<?= $basisgejala['nama_gejala'] ?>").setAttribute('checked', 'checked');
+                          document.getElementById('keyakinan-<?= $basisgejala['kode_gejala']?>').innerHTML = `
+                            <select class="form-select" name="nilai_keyakinan[]" required autofocus>
+                              <option value="">- Pilih nilai keyakinan -</option>
+                              <option value="0.2">Tidak Tahu</option>
+                              <option value="0.4">Kurang Yakin</option>
+                              <option value="0.6">Cukup Yakin</option>
+                              <option value="0.8">Yakin</option>
+                              <option value="1">Sangat Yakin</option>
+                            </select>
+                          `;
                           document.querySelector('.btn-danger').removeAttribute('disabled');
                         } else {
                           document.getElementById("<?= $basisgejala['nama_gejala'] ?>").removeAttribute('checked');
+                          document.getElementById('keyakinan-<?= $basisgejala['kode_gejala']?>').innerHTML = "-";
                           document.querySelector('.btn-danger').setAttribute('disabled', '');
                         }
                       });

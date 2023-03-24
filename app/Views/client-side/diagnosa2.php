@@ -15,7 +15,7 @@
               <thead>
                 <tr class="fw-bold">
                   <td>No</td>
-                  <td>Kode</td>
+               
                   <td>Nama Gejala</td>
                   <td>Nilai Keyakinan</td>
                 </tr>
@@ -23,7 +23,7 @@
 
               <tbody>
                 <?php
-                $conn = mysqli_connect('localhost', 'root', 'laragon', 'sistempakar');
+                $conn = mysqli_connect('localhost', 'root', '', 'sistempakar');
                
                 $numbtable = 1;
                 $getKode = $_GET['kode_gejala'];
@@ -34,7 +34,7 @@
                 ?>
                   <tr>
                     <td><?= $numbtable++ ?></td>
-                    <td><?= $getKode[$i] ?></td>
+                  
                     <td><?= $getGejala[$i] ?></td>
                     <td><?= $getKeyakinan[$i] ?></td>
                   </tr>
@@ -152,7 +152,7 @@
                     }
                     $akurasi = $persentaseHasil * 100;
                     $output = number_format($akurasi, 2, '.', '');
-                    $conn = mysqli_connect('localhost', 'root', 'laragon', 'sistempakar');
+                    $conn = mysqli_connect('localhost', 'root', '', 'sistempakar');
                     $penyakit = mysqli_query($conn, "SELECT nama_penyakit, gambar FROM penyakit WHERE kode_penyakit = '$hasilDiagnosa'");
                     $dataPenyakit = mysqli_fetch_array($penyakit);
                   
@@ -160,12 +160,12 @@
                     $diagnosa = mysqli_fetch_array($solusi);
 
                     echo "
-                      <div class='col-md-8' style='text-align: justify;'>
+                      <div class='col-md-9' style='text-align: justify;'>
                         <p class='lead'>Berdasarkan gejala dan nilai keyakinan yang telah Anda sebutkan. Hasil diagnosa menyatakan gejala tersebut memiliki kemungkinan persentase <strong style='font-size: larger;'>$output%</strong>, bahwa penyakit yang sedang diderita adalah <strong style='font-size: larger;'>$dataPenyakit[nama_penyakit]</strong>.</p>
 
                         <h3 class='mt-5'>Solusi Pengobatan</h3><strong class='lead'>$diagnosa[detail_solusi]</strong>
                       </div>
-                      <div class='col-md-4'>
+                      <div class='col-md-3'>
                         <img src='assets/images/penyakit-seeder/$dataPenyakit[gambar]' alt='Gambar Hasil Diagnosa' width='100%'>
                       </div>
                     ";

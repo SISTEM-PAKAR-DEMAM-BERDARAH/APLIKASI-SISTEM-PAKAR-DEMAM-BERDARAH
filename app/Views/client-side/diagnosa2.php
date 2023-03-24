@@ -8,8 +8,7 @@
       <form action="" method="get">
         <div class="card text-center mb-5 border-0 mt-5">
           <div class="card-header p-3 bg-transparent">
-            <h1 class="text-center fw-bold">Hasil</h1>
-            <h5 class="text-center">Pilihlah gejala</h5>
+            <h1 class="text-center fw-bold">Gejala yang Di Derita</h1>
           </div>
           <div class="card-body">
             <table class="table text-center">
@@ -42,26 +41,20 @@
                   
                   <?php 
                   $query = mysqli_query($conn, "SELECT cf_pakar from basis_pengetahuan WHERE kode_gejala = '$getKode[$i]'");               
-                  // $query2 = mysqli_fetch_array($query);
-   
                   while ($query2 = mysqli_fetch_array($query)) {
-                  // $nilaiUser[]=$query2['cf_pakar'];
                   array_push($nilaiUser,$query2['cf_pakar']);
-                  // echo $query2['cf_pakar'];
-                  }
-
+                  } 
+                  
                   
                   ?>
+
                 <?php
                 }
-                // for ($i = 0; $i < count($nilaiUser); $i++){
-                //     // $nilaiUser[]=$query2['cf_pakar'][$i];
-                //     echo $nilaiUser[$i];
-                //   }
 
-                function cf(array $nilaiPakar, array $nilaiUser, array $gejala) : String{
+                function cf(array $nilaiPakar, array $nilaiUser, array $gejala) {
       
                   $hasilDiagnosa = '';
+                  $persentaseHasil='';
                   $nilaiUserD01 = array();
                   $nilaiUserD02 = array();
                   $nilaiUserD03 = array();
@@ -142,25 +135,47 @@
                         }
                   }
                   }
-                  $hasilDiagnosa;
-                  if($hasilD01 > $hasilD02){
-                        $hasilDiagnosa = "Demam Dengue";
-                  }else{
-                        $hasilDiagnosa = "Demam Berdarah Dengue(DBD)";
-                  }
-                  return "Penyakit anda adalah ".$hasilDiagnosa;
+                    if($hasilD01 > $hasilD02){
+                        if($hasilD01 > $hasilD03){
+                            $hasilDiagnosa = "D01";
+                            $persentaseHasil = $hasilD01;
+                        }else{
+                            $hasilDiagnosa = "D03";
+                            $persentaseHasil = $hasilD03;
+                        }
+                    }else if($hasilD02 > $hasilD03){
+                        $hasilDiagnosa = "D02";
+                        $persentaseHasil = $hasilD02;
+                    }else{
+                        $hasilDiagnosa = "D03";
+                        $persentaseHasil = $hasilD03;
+                    }
+                    echo $persentaseHasil * 100;
+                    echo "\n";
+                    echo $hasilDiagnosa;
+                    $conn = mysqli_connect('localhost', 'root', '', 'sistempakar');
+                    $solusi = mysqli_query($conn, "SELECT detail_solusi FROM solusi WHERE kode_penyakit = '$hasilDiagnosa'");
+                    while ($diagnosa = mysqli_fetch_array($solusi)) {
+                      echo $diagnosa['detail_solusi'];
+                      } 
+                  
                   }
 
-                  echo cf($nilaiUser,$getKeyakinan, $getKode);
                 ?>
               </tbody>
-            </table>
-          </div>
+            </table>          
+          </div>   
           <div class="card-footer p-3 border-0 bg-transparent">
-            <button class="btn btn-danger" type="submit" name="insert">
-             Diagnosa
-            </button>
-          </div>
+            <div class="row">
+              <div class="col-md-12 mx-auto" style="text-align: justify;">
+                <div class="alert alert-danger" role="alert">
+                  <h2 class="text-center">Hasil Diagnosa!</h2>
+                  <img src="" alt="Gambar Hasil Diagnosa">
+                  <p class="lead">Berdasarkan gejala dan nilai keyakinan yang telah Anda sebutkan. Hasil diagnosa menyatakan gejala tersebut memiliki kemungkinan presentase <strong style="font-size: larger;"></strong>, bahwa penyakit yang sedang diderita adalah <strong style="font-size: larger;"><?php echo cf($nilaiUser, $getKeyakinan, $getKode) ?></strong>.</p>
+                </div>
+              </div>
+            </div>
+          </div>   
         </div>
       </form>
     </div>

@@ -15,22 +15,22 @@
             <div class="col-12 col-sm-12 col-md-12 col-xl-6 mt-5">
                 <div class="row">     
                     <div class="col-5 col-md-5 col-xl-5 card mx-auto mb-5 mt-4">
-                            <img src="user-assets/images/mudah.png" alt="" style="width: 65%; margin-top: -35%;margin-left: -17%;">
+                            <img src="user-assets/images/mudah.png" alt="Mudah Digunakan" style="width: 65%; margin-top: -35%;margin-left: -17%;">
                         <h5 class="text-center fw-bold">Mudah Digunakan</h5>
                         <p align="justify">Sistem Pakar ini mudah digunakan dimanapun dan Kapanpun dengan perangkat laptop atau Handphone yang terhubung dengan internet</p>
                     </div>
                     <div class="col-5 col-md-5 col-xl-5 card mx-auto mb-5 mt-4">
-                    <img src="user-assets/images/verifikasipakar.png" alt=""  style="width: 65%; margin-top: -35%; margin-left: -14%;">
+                    <img src="user-assets/images/verifikasipakar.png" alt="Terverifikasi Pakar"  style="width: 65%; margin-top: -35%; margin-left: -14%;">
                         <h5 class="text-center fw-bold">Terverifikasi Pakar</h5>
                         <p align="justify">Semua data yang ada di sistem pakar DBD ini, telah terverifikasi oleh pakar di Klinik Rahayu Medika</p>
                     </div>
                     <div class="col-5 col-md-5 col-xl-5 card mx-auto mb-5 mt-4">
-                    <img src="user-assets/images/informatif.png" alt=""  style="width: 65%; margin-top: -35%; margin-left: -24%;">
+                    <img src="user-assets/images/informatif.png" alt="Informatif"  style="width: 65%; margin-top: -35%; margin-left: -24%;">
                         <h5 class="text-center fw-bold">Informatif</h5>
                         <p align="justify">Sistem pakar ini juga memberikan informasi berupa detail penyakit, ciri-ciri nyamuk penyebab DBD dan cara Pencegahan DBD</p>
                     </div>
                     <div class="col-5 col-md-5 col-xl-5 card mx-auto mb-5 mt-4">
-                    <img src="user-assets/images/diagnosacepat.png" alt="" style="width: 65%; margin-top: -35%; margin-left: -20%;">
+                    <img src="user-assets/images/diagnosacepat.png" alt="Diagnosa Cepat" style="width: 65%; margin-top: -35%; margin-left: -20%;">
                         <h5 class="text-center fw-bold">Diagnosa Cepat</h5>
                         <p align="justify">Sistem Pakar ini cepat dan efisien dalam pengambilan keputusan diagnosa gejala Demam Berdarah Dengue. Akan tetapi Sistem Pakar ini tidak berarti menggantikan kedudukan seorang Pakar atau Dokter itu sendiri.</p>
                     </div>

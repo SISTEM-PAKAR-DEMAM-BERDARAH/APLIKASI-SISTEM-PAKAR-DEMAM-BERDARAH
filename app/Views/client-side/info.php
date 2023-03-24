@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col-6 col-sm-7 col-md-7 mt-5  col-lg-9 col-xl-9">
-                <h3>Ciri – ciri nyamuk aedes aegypty</h3>
+                <h3>Ciri – ciri nyamuk aedes aegypti</h3>
                 <ul>
                     <li>Berwarna hitam dengan belang putih. Saat sudah banyak menghisap darah, bagian perut nyamuk ini menjadi berwarna merah penuh berisi darah.</li>
                     <li>Di dalam rumah, nyamuk ini banyak ditemukan berkembang biak di tempat penampungan air, misalnya bak mandi</li>
@@ -19,7 +19,7 @@
                 </ul>
             </div>
             <div class="col-5  col-sm-5 col-md-5  col-lg-3 col-xl-3">
-            <img src="user-assets/images/nyamuk.png" alt="" class="mx-auto mt-4" width="100%">
+            <img src="user-assets/images/nyamuk.png" alt="Gambar Nyamuk Aedes Aegypti" class="mx-auto mt-4" width="100%">
             </div>
         </div>
     </div>
@@ -28,22 +28,22 @@
     <div class="container">
         <div class="row">
             <div class="col-5  col-sm-5 col-md-4  col-lg-4 col-xl-3">
-                <img src="user-assets/images/nyamuk2.png" alt="" class="mx-auto mt-4" width="100%">
+                <img src="user-assets/images/nyamuk2.png" alt="Ilustrasi Pencegahan DBD" class="mx-auto mt-4" width="100%">
             </div>
             <div class="col-7  col-sm-7 col-md-8  col-lg-8 col-xl-9">
                 <h3 class="text-center fw-bold">Cara Pencegahan</h3>
                 <p>Cara tepat untuk mencegah perkembangan nyamuk Aedes Aegypti adalah dengan menerapkan 3M Plus. dan 3M yang dimaksud yaitu :</p>
                 <div class="row">
                     <div class="card col-9 mb-4 col-sm-8 col-md-7  col-lg-7  col-xl-3 mx-auto">
-                        <img src="user-assets/images/menutup.png" alt="" class="rounded-circle mx-auto p-2" width="160px">
+                        <img src="user-assets/images/menutup.png" alt="Menutup" class="rounded-circle mx-auto p-2" width="160px">
                         <p class="text-center">Menutup rapat tempat penyimpanan air</p>
                     </div>
                     <div class="card col-9 mb-4 col-sm-8 col-md-7  col-lg-7 col-xl-3 mx-auto">
-                        <img src="user-assets/images/menguras.png" alt="" class="rounded-circle mx-auto p-2" width="160px">
+                        <img src="user-assets/images/menguras.png" alt="Menguras" class="rounded-circle mx-auto p-2" width="160px">
                         <p class="text-center">Menguras tempat air secara rutin, setidaknya seminggu sekali</p>
                     </div>
                     <div class="card col-9 mb-4 col-sm-8 col-md-7  col-lg-7 col-xl-3 mx-auto">
-                        <img src="user-assets/images/mengubur.png" alt="" class="rounded-circle mx-auto" width="200px">
+                        <img src="user-assets/images/mengubur.png" alt="Mengubur atau Mendaur Ulang" class="rounded-circle mx-auto" width="200px">
                         <p class="text-center">Mengubur atau mendaur ulang barang bekas yang dapat menyebabkan air menggenang</p>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
         <div class="row">
             <div class="col-8 col-md-6 col-lg-4 col-xl-3 mb-5 mt-4 mx-auto ">
                 <div class="card p-4 text-center">
-                    <img src="user-assets/images/dd.png" alt="" class="rounded-circle mx-auto" width="120px">
+                    <img src="user-assets/images/dd.png" alt="Ilustrasi Demam Dengue" class="rounded-circle mx-auto" width="120px">
                         <p>
                             <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#dd" aria-expanded="false" aria-controls="dd"> Demam Dengue </button>
                         </p>
@@ -92,7 +92,7 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
 
             <div class="col-8 col-md-6 col-lg-4 col-xl-3 mb-5 mt-4 mx-auto">
                 <div class="card p-4 text-center">
-                    <img src="user-assets/images/dbd.png" alt="" class="rounded-circle mx-auto" width="120px">
+                    <img src="user-assets/images/dbd.png" alt="Ilustrasi Demam Berdarah Dengue" class="rounded-circle mx-auto" width="120px">
                         <p>
                             <button class="btn btn-primary justify-content-center  mx-auto mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#dbd" aria-expanded="false" aria-controls="dbd"> Demam Berdarah Dengue </button>
                         </p>
@@ -106,7 +106,7 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
 
             <div class="col-8 col-sm-9 col-md-6 col-lg-4 col-xl-3 mb-5 mt-4 mx-auto">
                 <div class="card p-4">
-                    <img src="user-assets/images/ssd.png" alt="" class="rounded-circle mx-auto" width="120px">
+                    <img src="user-assets/images/ssd.png" alt="Ilustrasi Syok Syndrome Dengue" class="rounded-circle mx-auto" width="120px">
                         <p class="text-center">
                             <button class="btn btn-primary mx-auto mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#ssd" aria-expanded="false" aria-controls="ssd"> Syok Syndrome Dengue </button>
                         </p>

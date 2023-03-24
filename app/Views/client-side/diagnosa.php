@@ -45,7 +45,7 @@
                             <select class="form-select" name="nilai_keyakinan[]" required autofocus>
                               <option value="">- Pilih nilai keyakinan -</option>
                               <option value="0.2">Tidak Tahu</option>
-                              <option value="0.4">Kurang Yakin</option>
+                              <option value="0.4">Sedikit Yakin</option>
                               <option value="0.6">Cukup Yakin</option>
                               <option value="0.8">Yakin</option>
                               <option value="1">Sangat Yakin</option>

@@ -11,7 +11,7 @@
 
                     <?= view('Myth\Auth\Views\_message_block') ?>
 
-                    <form action="<?= url_to('register') ?>" method="post">
+                    <form action="<?= url_to('register') ?>" method="post" autocomplete="off">
                         <?= csrf_field() ?>
                         <div class="row">
                             <div class="col-md-6">

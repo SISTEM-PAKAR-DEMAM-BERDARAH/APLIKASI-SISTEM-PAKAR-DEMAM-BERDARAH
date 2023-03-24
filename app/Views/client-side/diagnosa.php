@@ -68,7 +68,7 @@
             <div class="card-footer p-3 border-0 bg-transparent">
               <button class="btn btn-danger float-end" type="submit" disabled>
                 <a class="text-decoration-none text-white">
-                  Next ➜
+                  Mulai Diagnosa ➜
                 </a>
               </button>
             </div>

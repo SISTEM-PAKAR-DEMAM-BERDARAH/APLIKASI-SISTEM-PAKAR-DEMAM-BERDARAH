@@ -23,7 +23,7 @@
 
               <tbody>
                 <?php
-                $conn = mysqli_connect('localhost', 'root', '', 'sistempakar');
+                $conn = mysqli_connect('localhost', 'root', 'laragon', 'sistempakar');
                
                 $numbtable = 1;
                 $getKode = $_GET['kode_gejala'];
@@ -40,10 +40,10 @@
                   </tr>
                   
                   <?php 
-                  $query = mysqli_query($conn, "SELECT cf_pakar from basis_pengetahuan WHERE kode_gejala = '$getKode[$i]'");               
+                  $query = mysqli_query($conn, "SELECT DISTINCT cf_pakar from basis_pengetahuan WHERE kode_gejala = '$getKode[$i]'");               
                   while ($query2 = mysqli_fetch_array($query)) {
                   array_push($nilaiUser,$query2['cf_pakar']);
-                  } 
+                  }
                   
                   
                   ?>
@@ -153,7 +153,7 @@
                     echo $persentaseHasil * 100;
                     echo "\n";
                     echo $hasilDiagnosa;
-                    $conn = mysqli_connect('localhost', 'root', '', 'sistempakar');
+                    $conn = mysqli_connect('localhost', 'root', 'laragon', 'sistempakar');
                     $solusi = mysqli_query($conn, "SELECT detail_solusi FROM solusi WHERE kode_penyakit = '$hasilDiagnosa'");
                     while ($diagnosa = mysqli_fetch_array($solusi)) {
                       echo $diagnosa['detail_solusi'];

@@ -23,7 +23,7 @@
 
               <tbody>
                 <?php
-                $conn = mysqli_connect('localhost', 'root', '', 'sistempakar');
+                $conn = mysqli_connect('localhost', 'root', 'laragon', 'sistempakar');
                
                 $numbtable = 1;
                 $getKode = $_GET['kode_gejala'];
@@ -152,33 +152,35 @@
                     }
                     $akurasi = $persentaseHasil * 100;
                     $output = number_format($akurasi, 2, '.', '');
-                    $conn = mysqli_connect('localhost', 'root', '', 'sistempakar');
-                    $penyakit = mysqli_query($conn, "SELECT nama_penyakit FROM penyakit WHERE kode_penyakit = '$hasilDiagnosa'");
+                    $conn = mysqli_connect('localhost', 'root', 'laragon', 'sistempakar');
+                    $penyakit = mysqli_query($conn, "SELECT nama_penyakit, gambar FROM penyakit WHERE kode_penyakit = '$hasilDiagnosa'");
                     $dataPenyakit = mysqli_fetch_array($penyakit);
-
-                    echo " <p class='lead'>Berdasarkan gejala dan nilai keyakinan yang telah Anda sebutkan. Hasil diagnosa menyatakan gejala tersebut memiliki kemungkinan persentase <strong style='font-size: larger;'>$output%</strong>, bahwa penyakit yang sedang diderita adalah <strong style='font-size: larger;'> $dataPenyakit[nama_penyakit] </strong>.</p>";
                   
                     $solusi = mysqli_query($conn, "SELECT detail_solusi FROM solusi WHERE kode_penyakit = '$hasilDiagnosa'");
                     $diagnosa = mysqli_fetch_array($solusi);
-                      echo "<h3 class = 'mt-4'>Solusi Pengobatan</h3><strong class='lead'>$diagnosa[detail_solusi]</strong>";
-                                   
+
+                    echo "
+                      <div class='col-md-8' style='text-align: justify;'>
+                        <p class='lead'>Berdasarkan gejala dan nilai keyakinan yang telah Anda sebutkan. Hasil diagnosa menyatakan gejala tersebut memiliki kemungkinan persentase <strong style='font-size: larger;'>$output%</strong>, bahwa penyakit yang sedang diderita adalah <strong style='font-size: larger;'>$dataPenyakit[nama_penyakit]</strong>.</p>
+
+                        <h3 class='mt-5'>Solusi Pengobatan</h3><strong class='lead'>$diagnosa[detail_solusi]</strong>
+                      </div>
+                      <div class='col-md-4'>
+                        <img src='assets/images/penyakit-seeder/$dataPenyakit[gambar]' alt='Gambar Hasil Diagnosa' width='100%'>
+                      </div>
+                    ";
                   }
                 ?>
               </tbody>
             </table>          
           </div>   
           <div class="card-footer p-3 border-0 bg-transparent">
-          <div class="alert alert-danger" role="alert">
-          <h2 class="mb-3" align="left">Hasil Diagnosa!</h2>
-            <div class="row">
-              <div class="col-md-8 mx-auto" style="text-align: justify;">   
+            <div class="alert alert-danger" role="alert">
+              <h2 class="mb-3" align="left">Hasil Diagnosa!</h2>
+              <div class="row">   
                 <?php echo cf($nilaiUser, $getKeyakinan, $getKode) ?>
-                </div>
-              <div class="col-md-4">
-              <img src="assets/images/penyakit-seeder/<?php  ?>" alt="Gambar Hasil Diagnosa"> 
               </div>
             </div>
-          </div>
           </div>   
         </div>
       </form>

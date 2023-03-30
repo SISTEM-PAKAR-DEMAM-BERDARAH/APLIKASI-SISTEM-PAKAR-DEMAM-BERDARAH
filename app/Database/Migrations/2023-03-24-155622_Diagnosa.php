@@ -17,7 +17,7 @@ class Diagnosa extends Migration
             ],
             'id_user' => [
                 'type' => 'int',
-                'unsigned'       => true,
+                'unsigned' => true,
             ],
             'tanggal_diagnosa' => [
                 'type' => 'DATE',
@@ -27,12 +27,11 @@ class Diagnosa extends Migration
                 'type' => 'TEXT',
                 'null' => false,
             ],
-            'penyakit' => [
+            'kode_penyakit' => [
                 'type'       => 'VARCHAR',
-                'constraint' => 100,
-                'null' => false,
+                'constraint' => 3,
             ],
-            'cf_pakar' => [
+            'cf_hasil' => [
                 'type' => 'float',
                 'null' => false,
             ],

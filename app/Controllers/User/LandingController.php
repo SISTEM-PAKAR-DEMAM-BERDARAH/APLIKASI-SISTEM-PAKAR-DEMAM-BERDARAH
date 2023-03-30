@@ -2,16 +2,18 @@
 
 namespace App\Controllers\User;
 use App\Controllers\BaseController;
+use App\Models\DiagnosaModel;
 use App\Models\PengetahuanModel;
-
 
 class LandingController extends BaseController
 {
    protected $PengetahuanModel;
+   protected $DiagnosaModel;
 
    public function __construct()
    {
       $this->PengetahuanModel = new PengetahuanModel();
+      $this->DiagnosaModel = new DiagnosaModel();
    }
 
    public function register ()
@@ -39,7 +41,14 @@ class LandingController extends BaseController
 
    public function diagnosa2 ()
    {
-      return view('/client-side/diagnosa2');
+      $data = [
+         'autocode' => $this->DiagnosaModel->autoCodeDiagnosa()
+      ];
+      return view('/client-side/diagnosa2', $data);
+   }
+
+   public function diagnosaUser() {
+      return view('/client-side/diagnosa-user');
    }
 
    public function info ()

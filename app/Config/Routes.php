@@ -3,6 +3,7 @@
 namespace Config;
 
 use App\Controllers\Admin\DashboardController;
+use App\Controllers\Admin\DiagnosaController;
 use App\Controllers\Admin\GejalaController;
 use App\Controllers\Admin\PengetahuanController;
 use App\Controllers\Admin\PenyakitController;
@@ -79,6 +80,9 @@ $routes->get('/data-solusi/create', [SolusiController::class, 'create'], ['filte
 $routes->post('/data-solusi/insert', [SolusiController::class, 'insert'], ['filter' => 'role:admin']);
 $routes->delete('/data-solusi/(:any)', [SolusiController::class, 'delete'], ['filter' => 'role:admin']);
 
+//! ROUTES DIAGNOSA
+$routes->post('/insert-diagnosa', [DiagnosaController::class, 'insert'], ['filter' => 'role:admin,user']);
+$routes->get('/data-diagnosa-user', [LandingController::class, 'diagnosaUser'], ['filter' => 'role:admin,user']);
 
 //! USER
 $routes->get('/diagnosa', [LandingController::class, 'diagnosa'], ['filter' => 'role:admin,user']);

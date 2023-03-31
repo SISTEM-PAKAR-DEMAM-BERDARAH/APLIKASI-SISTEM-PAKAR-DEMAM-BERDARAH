@@ -182,7 +182,7 @@
               <input type="text" value="<?= $autocode ?>" name="kode_diagnosa">
               <input type="text" value="<?= user()->id ?>" name="id_user">
               <input type="text" value="<?= date('Y-m-d') ?>" name="tanggal_diagnosa">
-              <textarea cols="100" rows="4" name="gejala"><?php for ($index = 0; $index < count($getGejala); $index++) { echo "$getGejala[$index],"; } ?></textarea>
+              <textarea cols="100" rows="4" name="gejala"><?php for ($index = 0; $index < count($getGejala); $index++) { echo "<li>$getGejala[$index]</li>"; } ?></textarea>
             </div>
           </div>
           <div class="card-footer p-3 border-0 bg-transparent">

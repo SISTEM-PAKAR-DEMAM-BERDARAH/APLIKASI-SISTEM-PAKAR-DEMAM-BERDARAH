@@ -16,7 +16,10 @@ class DiagnosaController extends BaseController
    }
 
    public function index() {
-      return view('/server-side/diagnosa/index');
+      $data = [
+         'datadiagnosa' => $this->DiagnosaModel->dataDiagnosa()
+      ];
+      return view('/server-side/diagnosa/index', $data);
    }
 
    public function insert()

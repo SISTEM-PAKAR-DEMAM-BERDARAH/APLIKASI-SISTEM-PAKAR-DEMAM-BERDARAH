@@ -116,7 +116,7 @@
                      <h1><span class="uil-clipboard-notes text-purple"></span></h1>
                   </div>
                   <div>
-                     <h4 class="mb-1 mt-1"><span data-plugin="counterup">198</span></h4>
+                     <h4 class="mb-1 mt-1"><span data-plugin="counterup"><?= $totaldiagnosa; ?></span></h4>
                      <p class="text-muted mb-0">Hasil Diagnosa</p>
                   </div>
                   <p class="text-muted mt-3 mb-0 text-right"><span class="text-purple me-1"><i class="uil-clipboard-notes me-1"></i>detail hasil diagnosa</span>

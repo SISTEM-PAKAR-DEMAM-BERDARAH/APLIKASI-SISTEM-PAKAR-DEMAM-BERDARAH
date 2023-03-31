@@ -41,23 +41,28 @@
             </div>
             <div data-simplebar style="max-height: 230px;">
                <a href="javascript:void(0);" class="text-reset notification-item">
-                  <div class="d-flex align-items-start">
-                     <div class="flex-shrink-0 me-3">
-                        <img src="<?= base_url('assets/images/users/avatar-4.jpg') ?>" class="rounded-circle avatar-xs" alt="user-pic">
-                     </div>
-                     <div class="flex-grow-1">
-                        <h6 class="mb-1">Salena Layfield</h6>
-                        <div class="font-size-12 text-muted">
-                           <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
-                           <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hours ago</p>
+                  <?php
+                  foreach ($notif as $diagnosa) {
+                  ?>
+                     <div class="d-flex align-items-start">
+                        <div class="flex-shrink-0 me-3">
+                           <img src="<?= base_url('assets/images/users/avatar-4.jpg') ?>" class="rounded-circle avatar-xs" alt="user-pic">
+                        </div>
+                        <div class="flex-grow-1">
+                           <h6 class="mb-1"><?= $diagnosa['username']; ?></h6>
+                           <div class="font-size-12 text-muted">
+                              <p class="mb-1">Baru saja melakukan diagnosa penyakit <strong><?= $diagnosa['nama_penyakit']; ?></strong></p>
+                           </div>
                         </div>
                      </div>
-                  </div>
+                  <?php
+                  }
+                  ?>
                </a>
             </div>
             <div class="p-2 border-top">
                <div class="d-grid">
-                  <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
+                  <a class="btn btn-sm btn-link font-size-14 text-center" href="/data-diagnosa">
                      <i class="uil-arrow-circle-right me-1"></i> Selengkapnya...
                   </a>
                </div>

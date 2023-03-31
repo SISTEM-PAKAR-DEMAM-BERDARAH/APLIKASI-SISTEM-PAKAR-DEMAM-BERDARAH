@@ -3,6 +3,7 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
+use App\Models\DiagnosaModel;
 use App\Models\GejalaModel;
 use App\Models\PengetahuanModel;
 use App\Models\PenggunaModel;
@@ -16,6 +17,7 @@ class DashboardController extends BaseController
    protected $GejalaModel;
    protected $PenyakitModel;
    protected $SolusiModel;
+   protected $DiagnosaModel;
 
    public function __construct()
    {
@@ -24,6 +26,7 @@ class DashboardController extends BaseController
       $this->GejalaModel = new GejalaModel();
       $this->PenyakitModel = new PenyakitModel();
       $this->SolusiModel = new SolusiModel();
+      $this->DiagnosaModel = new DiagnosaModel();
    }
 
    public function index()
@@ -33,7 +36,9 @@ class DashboardController extends BaseController
          'totalpengetahuan' => $this->PengetahuanModel->countAllResults(),
          'totalgejala' => $this->GejalaModel->countAllResults(),
          'totalpenyakit' => $this->PenyakitModel->countAllResults(),
-         'totalsolusi' => $this->SolusiModel->countAllResults()
+         'totalsolusi' => $this->SolusiModel->countAllResults(),
+         'totaldiagnosa' => $this->DiagnosaModel->countAllResults(),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/dashboard', $data);
    }

@@ -3,22 +3,26 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
+use App\Models\DiagnosaModel;
 use App\Models\GejalaModel;
 
 class GejalaController extends BaseController
 {
    protected $GejalaModel;
+   protected $DiagnosaModel;
    protected $helpers = ['form'];
 
    public function __construct()
    {
       $this->GejalaModel = new GejalaModel();
+      $this->DiagnosaModel = new DiagnosaModel();
    }
 
    public function index()
    {
       $data = [
-         'datagejala' => $this->GejalaModel->datagejala()
+         'datagejala' => $this->GejalaModel->datagejala(),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/gejala/index', $data);
    }
@@ -26,7 +30,8 @@ class GejalaController extends BaseController
    public function create()
    {
       $data = [
-         'autocode' => $this->GejalaModel->autoCodeGejala()
+         'autocode' => $this->GejalaModel->autoCodeGejala(),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/gejala/create', $data);
    }
@@ -61,7 +66,8 @@ class GejalaController extends BaseController
    public function edit($id)
    {
       $data = [
-         'gejala' => $this->GejalaModel->getGejala($id)
+         'gejala' => $this->GejalaModel->getGejala($id),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/gejala/edit', $data);
    }

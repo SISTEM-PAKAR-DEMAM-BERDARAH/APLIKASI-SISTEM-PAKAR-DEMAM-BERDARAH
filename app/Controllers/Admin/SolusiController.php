@@ -3,6 +3,7 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
+use App\Models\DiagnosaModel;
 use App\Models\PenyakitModel;
 use App\Models\SolusiModel;
 
@@ -10,18 +11,21 @@ class SolusiController extends BaseController
 {
    protected $PenyakitModel;
    protected $SolusiModel;
+   protected $DiagnosaModel;
    protected $helpers = ['form'];
 
    public function __construct()
    {
       $this->PenyakitModel = new PenyakitModel();
       $this->SolusiModel = new SolusiModel();
+      $this->DiagnosaModel = new DiagnosaModel();
    }
 
    public function index()
    {
       $data = [
-         'datasolusi' => $this->SolusiModel->datasolusi()
+         'datasolusi' => $this->SolusiModel->datasolusi(),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/solusi/index', $data);
    }
@@ -30,7 +34,8 @@ class SolusiController extends BaseController
    {
       $data = [
          'penyakit' => $this->PenyakitModel->datapenyakit(),
-         'autocode' => $this->SolusiModel->autoCodeSolusi()
+         'autocode' => $this->SolusiModel->autoCodeSolusi(),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/solusi/create', $data);
    }

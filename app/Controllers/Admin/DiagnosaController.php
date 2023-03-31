@@ -17,7 +17,8 @@ class DiagnosaController extends BaseController
 
    public function index() {
       $data = [
-         'datadiagnosa' => $this->DiagnosaModel->dataDiagnosa()
+         'datadiagnosa' => $this->DiagnosaModel->dataDiagnosa(),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/diagnosa/index', $data);
    }

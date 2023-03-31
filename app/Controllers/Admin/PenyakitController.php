@@ -3,22 +3,26 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
+use App\Models\DiagnosaModel;
 use App\Models\PenyakitModel;
 
 class PenyakitController extends BaseController
 {
    protected $PenyakitModel;
+   protected $DiagnosaModel;
    protected $helpers = ['form'];
 
    public function __construct()
    {
       $this->PenyakitModel = new PenyakitModel();
+      $this->DiagnosaModel = new DiagnosaModel();
    }
 
    public function index()
    {
       $data = [
-         'datapenyakit' => $this->PenyakitModel->datapenyakit()
+         'datapenyakit' => $this->PenyakitModel->datapenyakit(),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/penyakit/index', $data);
    }
@@ -26,7 +30,8 @@ class PenyakitController extends BaseController
    public function create()
    {
       $data = [
-         'autocode' => $this->PenyakitModel->autoCodePenyakit()
+         'autocode' => $this->PenyakitModel->autoCodePenyakit(),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/penyakit/create', $data);
    }
@@ -75,7 +80,8 @@ class PenyakitController extends BaseController
    public function edit($id)
    {
       $data = [
-         'penyakit' => $this->PenyakitModel->getPenyakit($id)
+         'penyakit' => $this->PenyakitModel->getPenyakit($id),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/penyakit/edit', $data);
    }

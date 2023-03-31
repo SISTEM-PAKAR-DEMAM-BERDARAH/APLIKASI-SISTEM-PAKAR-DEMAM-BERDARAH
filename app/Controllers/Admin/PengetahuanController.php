@@ -3,6 +3,7 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
+use App\Models\DiagnosaModel;
 use App\Models\GejalaModel;
 use App\Models\PengetahuanModel;
 use App\Models\PenyakitModel;
@@ -12,6 +13,7 @@ class PengetahuanController extends BaseController
    protected $PengetahuanModel;
    protected $PenyakitModel;
    protected $GejalaModel;
+   protected $DiagnosaModel;
    protected $helpers = ['form'];
 
    public function __construct()
@@ -19,12 +21,14 @@ class PengetahuanController extends BaseController
       $this->PengetahuanModel = new PengetahuanModel();
       $this->PenyakitModel = new PenyakitModel();
       $this->GejalaModel = new GejalaModel();
+      $this->DiagnosaModel = new DiagnosaModel();
    }
 
    public function index()
    {
       $data = [
-         'datapengetahuan' => $this->PengetahuanModel->datapengetahuan()
+         'datapengetahuan' => $this->PengetahuanModel->datapengetahuan(),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/basis-pengetahuan/index', $data);
    }
@@ -34,7 +38,8 @@ class PengetahuanController extends BaseController
       $data = [
          'penyakit' => $this->PenyakitModel->datapenyakit(),
          'gejala' => $this->GejalaModel->datagejala(),
-         'autocode' => $this->PengetahuanModel->autoCodePengetahuan()
+         'autocode' => $this->PengetahuanModel->autoCodePengetahuan(),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/basis-pengetahuan/create', $data);
    }
@@ -92,6 +97,7 @@ class PengetahuanController extends BaseController
          'getpenyakit' => $this->PengetahuanModel->getPenyakit($id),
          'gejala' => $this->GejalaModel->datagejala(),
          'getgejala' => $this->PengetahuanModel->getGejala($id),
+         'notif' => $this->DiagnosaModel->notification()
       ];
       return view('/server-side/basis-pengetahuan/edit', $data);
    }

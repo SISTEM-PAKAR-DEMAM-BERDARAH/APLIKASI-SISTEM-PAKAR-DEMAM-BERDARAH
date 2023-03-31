@@ -16,6 +16,11 @@ class DiagnosaModel extends Model
       return $this->db->table('diagnosa')->join('users', 'users.id = diagnosa.id_user', 'inner')->join('penyakit', 'penyakit.kode_penyakit = diagnosa.kode_penyakit', 'inner')->join('solusi', 'solusi.kode_penyakit = penyakit.kode_penyakit', 'inner')->get()->getResultArray();
    }
 
+   public function notification()
+   {
+      return $this->db->table('diagnosa')->join('users', 'users.id = diagnosa.id_user', 'inner')->join('penyakit', 'penyakit.kode_penyakit = diagnosa.kode_penyakit', 'inner')->join('solusi', 'solusi.kode_penyakit = penyakit.kode_penyakit', 'inner')->limit(3)->get()->getResultArray();
+   }
+
    public function autoCodeDiagnosa()
    {
       $selectId = $this->db->table('diagnosa')->selectMax('kode_diagnosa')->get()->getResultArray();

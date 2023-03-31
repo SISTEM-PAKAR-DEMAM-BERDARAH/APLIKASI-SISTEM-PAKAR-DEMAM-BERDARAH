@@ -15,6 +15,10 @@ class DiagnosaController extends BaseController
       $this->DiagnosaModel = new DiagnosaModel();
    }
 
+   public function index() {
+      return view('/server-side/diagnosa/index');
+   }
+
    public function insert()
    {
       $this->DiagnosaModel->save([

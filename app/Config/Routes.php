@@ -82,6 +82,7 @@ $routes->delete('/data-solusi/(:any)', [SolusiController::class, 'delete'], ['fi
 
 //! ROUTES DIAGNOSA
 $routes->post('/insert-diagnosa', [DiagnosaController::class, 'insert'], ['filter' => 'role:admin,user']);
+$routes->get('/data-diagnosa', [DiagnosaController::class, 'index'], ['filter' => 'role:admin']);
 $routes->get('/data-diagnosa-user', [LandingController::class, 'diagnosaUser'], ['filter' => 'role:admin,user']);
 
 //! USER

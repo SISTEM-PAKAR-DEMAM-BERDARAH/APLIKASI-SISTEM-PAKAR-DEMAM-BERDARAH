@@ -13,7 +13,7 @@ class DiagnosaModel extends Model
 
    public function dataDiagnosa()
    {
-      return $this->findAll();
+      return $this->db->table('diagnosa')->join('users', 'users.id = diagnosa.id_user', 'inner')->join('penyakit', 'penyakit.kode_penyakit = diagnosa.kode_penyakit', 'inner')->get()->getResultArray();
    }
 
    public function autoCodeDiagnosa()

@@ -43,7 +43,7 @@
                   </a>
                   <div class="dropdown-menu" aria-labelledby="topnav-pages">
                      <a href="<?= base_url('/rules-base') ?>" class="dropdown-item">Aturan Diagnosa</a>
-                     <a href="<?= base_url('/') ?>" class="dropdown-item">Hasil Diagnosa</a>
+                     <a href="<?= base_url('/data-diagnosa') ?>" class="dropdown-item">Hasil Diagnosa</a>
                      <a href="<?= base_url('/diagnosa') ?>" class="dropdown-item">Halaman Diagnosa</a>
                   </div>
                </li>

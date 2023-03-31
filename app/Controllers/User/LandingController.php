@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Controllers\User;
-use App\Controllers\BaseController;
+
 use App\Models\DiagnosaModel;
+use Myth\Auth\Models\UserModel;
 use App\Models\PengetahuanModel;
+use App\Controllers\BaseController;
 
 class LandingController extends BaseController
 {
@@ -16,14 +18,14 @@ class LandingController extends BaseController
       $this->DiagnosaModel = new DiagnosaModel();
    }
 
-   public function register ()
+   public function register()
    {
       return view('/client-side/register');
    }
 
    public function index()
    {
-    return view ('client-side/index');
+      return view('client-side/index');
    }
    public function home()
    {
@@ -39,7 +41,7 @@ class LandingController extends BaseController
       return view('/client-side/diagnosa', $data);
    }
 
-   public function diagnosa2 ()
+   public function diagnosa2()
    {
       $data = [
          'autocode' => $this->DiagnosaModel->autoCodeDiagnosa()
@@ -47,30 +49,41 @@ class LandingController extends BaseController
       return view('/client-side/diagnosa2', $data);
    }
 
-   public function diagnosaUser() 
+   private function authenticateUser()
    {
-      $data = [
-         'userdiagnosa' =>$this->DiagnosaModel->userDiagnosa()
-      ];
-      return view('/client-side/diagnosa-user', $data);
+      $auth = service('authentication');
+      $user = $auth->user();
+
+      if (!$user) {
+         // Handle user authentication error
+      }
+
+      return $user->id;
    }
 
-   public function info ()
+   public function diagnosaUser()
+   {
+      $userId = $this->authenticateUser(); // Mendapatkan id user yang sedang login
+      $data = $this->DiagnosaModel->dataDiagnosaUser($userId);
+      return view('/client-side/diagnosa-user', ['data' => $data]);
+   }
+
+   public function info()
    {
       return view('/client-side/info');
    }
 
-   public function kontak ()
+   public function kontak()
    {
       return view('/client-side/kontak');
    }
 
-   public function tentang ()
+   public function tentang()
    {
       return view('/client-side/tentang');
    }
 
-   public function edit ()
+   public function edit()
    {
       return view('/client-side/edit');
    }

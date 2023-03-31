@@ -3,6 +3,10 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use Myth\Auth\Authentication\LocalAuthenticator;
+
+
+
 
 class DiagnosaModel extends Model
 {
@@ -10,6 +14,8 @@ class DiagnosaModel extends Model
    protected $primaryKey = 'kode_diagnosa';
    protected $useAutoIncrement = false;
    protected $allowedFields = ['kode_diagnosa', 'id_user', 'tanggal_diagnosa', 'gejala', 'kode_penyakit', 'cf_hasil'];
+
+
 
    public function dataDiagnosa()
    {
@@ -42,5 +48,10 @@ class DiagnosaModel extends Model
       }
       $resultId = (int) substr($maxId, 2) + 1;
       return 'HD' . sprintf("%04s", $resultId);
+   }
+
+   public function dataDiagnosaUser($userId)
+   {
+      return $this->where('id_user', $userId)->findAll();
    }
 }

@@ -39,6 +39,7 @@ class Diagnosa extends Migration
         ]);
         $this->forge->addKey('kode_diagnosa', true);
         $this->forge->addForeignKey('id_user', 'users', 'id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('kode_penyakit', 'penyakit', 'kode_penyakit', 'CASCADE', 'CASCADE');
         $this->forge->createTable('diagnosa');
     }
 

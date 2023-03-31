@@ -37,17 +37,6 @@ body {
     background-color: white;
 }
 
-.login {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.login .form-control {
-    background-color: #D9D9D9;
-    
-}
 
 .footer {
     width: 100%;
@@ -56,15 +45,12 @@ body {
     font-size: 15px;
 }
 
-.register {
+.login {
+    width: 40%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);   
-}
-
-.register .form-control {
-    background-color: #D9D9D9;
 }
 
 .home{

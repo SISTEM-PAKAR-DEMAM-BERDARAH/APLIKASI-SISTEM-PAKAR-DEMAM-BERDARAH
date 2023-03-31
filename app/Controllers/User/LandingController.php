@@ -47,8 +47,12 @@ class LandingController extends BaseController
       return view('/client-side/diagnosa2', $data);
    }
 
-   public function diagnosaUser() {
-      return view('/client-side/diagnosa-user');
+   public function diagnosaUser() 
+   {
+      $data = [
+         'userdiagnosa' =>$this->DiagnosaModel->userDiagnosa()
+      ];
+      return view('/client-side/diagnosa-user', $data);
    }
 
    public function info ()

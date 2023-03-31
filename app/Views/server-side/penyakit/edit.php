@@ -20,20 +20,12 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label for="detail_penyakit" class="form-label">Detail Penyakit</label>
-                                <input type="text" class="form-control <?= (validation_show_error('detail_penyakit')) ? 'is-invalid' : '' ?>" id="detail_penyakit" name="detail_penyakit" value="<?= old('detail_penyakit', $penyakit['detail_penyakit']); ?>">
-                                <div class="invalid-feedback">
-                                    <?= validation_show_error('detail_penyakit') ?>
-                                </div>
-                            </div>
-                            <div class="mb-3">
                                 <label for="gambar" class="form-label">Gambar</label>
                                 <input type="text" class="form-control <?= (validation_show_error('gambar')) ? 'is-invalid' : '' ?>" id="gambar" name="gambar" value="<?= old('gambar', $penyakit['gambar']); ?>" />
                                 <div class="invalid-feedback">
                                     <?= validation_show_error('gambar') ?>
                                 </div>
                             </div>
-
                             <div>
                                 <div>
                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">

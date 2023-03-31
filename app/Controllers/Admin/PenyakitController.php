@@ -90,12 +90,6 @@ class PenyakitController extends BaseController
                'required' => 'Nama penyakit harus diisi.',
             ]
          ],
-         'detail_penyakit' => [
-            'rules' => 'required',
-            'errors' => [
-               'required' => 'Detail penyakit harus diisi.',
-            ]
-         ],
          'gambar' => [
             'rules' => 'required',
             'errors' => [
@@ -110,7 +104,6 @@ class PenyakitController extends BaseController
       $this->PenyakitModel->save([
          'kode_penyakit' => $id,
          'nama_penyakit' => $this->request->getVar('nama_penyakit'),
-         'detail_penyakit' => $this->request->getVar('detail_penyakit'),
          'gambar' => $this->request->getVar('gambar'),
       ]);
 

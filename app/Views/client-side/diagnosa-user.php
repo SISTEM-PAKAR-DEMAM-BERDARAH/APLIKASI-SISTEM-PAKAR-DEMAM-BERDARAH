@@ -9,6 +9,7 @@
                     <h2 class="text-center fw-bold">HASIL DIAGNOSA USER</h2>
                 </div>
                 <div class="card-body">
+                    <div class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr class="fw-bold text-center">
@@ -31,13 +32,14 @@
                                             <?= $value['gejala'] ?>
                                         </ul>
                                     </td>
-                                    <td class="" style="width: 24%;"><?= $value['nama_penyakit'] ?></td>
+                                    <td class="text-center" style="width: 24%;"><?= $value['nama_penyakit'] ?></td>
                                     <td class="text-center" style="width: 10%;"><?= $value['cf_hasil'] ?>%</td>
                                     <td class="text-justify" style="width: 20%;"><?= $value['detail_solusi'] ?></td>         
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </div>

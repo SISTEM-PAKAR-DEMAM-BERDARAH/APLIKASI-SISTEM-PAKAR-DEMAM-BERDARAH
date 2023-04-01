@@ -40,6 +40,5 @@ class DiagnosaModel extends Model
    public function dataDiagnosaUser($userId)
    {
     return $this->db->table('diagnosa')->join('penyakit','penyakit.kode_penyakit = diagnosa.kode_penyakit')->join('solusi', 'solusi.kode_penyakit = penyakit.kode_penyakit')->where('id_user', $userId)->get()->getResultArray();
-      
    }
 }

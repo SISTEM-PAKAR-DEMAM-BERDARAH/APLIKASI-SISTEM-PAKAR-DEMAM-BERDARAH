@@ -6,11 +6,13 @@ use App\Models\DiagnosaModel;
 use Myth\Auth\Models\UserModel;
 use App\Models\PengetahuanModel;
 use App\Controllers\BaseController;
+use Myth\Auth\Password;
 
 class LandingController extends BaseController
 {
    protected $PengetahuanModel;
    protected $DiagnosaModel;
+   protected $helpers = ['form', 'auth'];
 
    public function __construct()
    {
@@ -86,5 +88,16 @@ class LandingController extends BaseController
    public function edit()
    {
       return view('/client-side/edit');
+   }
+
+   public function updatepass() {
+      $userModel = new UserModel();
+      $data = [
+         'password_hash' => Password::hash($this->request->getVar('passwordBaru')),
+         'reset_hash' => null,
+         'reset_at' => null,
+         'reset_expires' => null,
+      ];
+      $userModel->update($this->request->getVar('id'), $data);
    }
 }

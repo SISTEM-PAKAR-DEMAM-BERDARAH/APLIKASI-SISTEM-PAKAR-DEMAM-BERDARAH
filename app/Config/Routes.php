@@ -88,12 +88,13 @@ $routes->get('/data-diagnosa-user', [LandingController::class, 'diagnosaUser'], 
 //! USER
 $routes->get('/diagnosa', [LandingController::class, 'diagnosa'], ['filter' => 'role:admin,user']);
 $routes->get('/input-nilai-diagnosa', [LandingController::class, 'diagnosa2'], ['filter' => 'role:admin,user']);
-$routes->get('/edit', [LandingController::class, 'edit'], ['filter' => 'role:admin,user']);
+$routes->get('/ubah-password', [LandingController::class, 'edit'], ['filter' => 'role:admin,user']);
 $routes->get('/', [LandingController::class, 'home']);
 // $routes->get('/register', [LandingController::class, 'register']);
 $routes->get('/info', [LandingController::class, 'info']);
 $routes->get('/kontak', [LandingController::class, 'kontak']);
 $routes->get('/tentang', [LandingController::class, 'tentang']);
+$routes->post('/update-password', [LandingController::class, 'updatepass']);
 
 
 /*

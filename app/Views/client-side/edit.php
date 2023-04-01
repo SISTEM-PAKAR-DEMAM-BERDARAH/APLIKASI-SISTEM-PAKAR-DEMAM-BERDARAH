@@ -16,35 +16,28 @@
 <body>
 
     <div class="container">
-      
           <div class="login">
-            <h2 class="text-center fw-bold">Ubah Password</h2>
-            <p class="text-center">Masukkan Username dan Password</p>
-            <form>
-            <div class=" mx-auto mb-4">
-                    <input class="form-control" type="password" placeholder="Masukkan Password Lama"required autocomplete="off">
-                </div>
+            <h1>Form Ubah Password</h1>
+            <p class="lead mb-4">Silahkan konfirmasi perubahan password Anda</p>
+            <form action="/update-password" method="post" autocomplete="off">
+                <?= csrf_field() ?>
                 <div class=" mx-auto mb-4">
-                    <input class="form-control" type="password" placeholder="Masukkan Password Baru" required autocomplete="off">
-                </div>
-                <div class=" mx-auto mb-4">
-                    <input class="form-control" type="password" placeholder="Ulangi Password Baru" required autocomplete="off">
+                    <input type="text" name="id" value="<?= user()->id ?>">
+                    <input class="form-control p-3" type="text" name="passwordBaru" placeholder="Ulangi Password Baru" required>
                 </div>
                 <div class="row ">          
                     <div class="d-grid text-center  col-6 mb-3 ">
-                    <button class="btn btn-primary " type="button">
-                        <a class="text-decoration-none text-white" href="/"> Kembali</a>
+                    <button class="btn btn-primary btn-lg" type="button">
+                        <a class="text-decoration-none text-white" href="/">Kembali</a>
                     </button>
                 </div>
                 <div class="d-grid text-center col-6 mb-3 ">
-                    <button class="btn btn-success" type="button">
-                    <a class="text-decoration-none text-white" href=""> Ubah</a>
+                    <button class="btn btn-success btn-lg" type="submit">
+                        <a class="text-decoration-none text-white">Ubah</a>
                     </button>
                 </div>
                 </div>
-
-            </form>   
-  
+            </form>
       </div>
     </div>
 

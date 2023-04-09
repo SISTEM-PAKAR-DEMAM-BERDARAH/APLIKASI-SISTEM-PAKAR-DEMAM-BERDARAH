@@ -99,5 +99,7 @@ class LandingController extends BaseController
          'reset_expires' => null,
       ];
       $userModel->update($this->request->getVar('id'), $data);
+
+      return redirect()->to('/');
    }
 }

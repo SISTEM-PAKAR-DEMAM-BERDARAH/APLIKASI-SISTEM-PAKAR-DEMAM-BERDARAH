@@ -78,6 +78,8 @@ $routes->delete('/basis-pengetahuan/(:any)', [PengetahuanController::class, 'del
 $routes->get('/data-solusi', [SolusiController::class, 'index'], ['filter' => 'role:admin']);
 $routes->get('/data-solusi/create', [SolusiController::class, 'create'], ['filter' => 'role:admin']);
 $routes->post('/data-solusi/insert', [SolusiController::class, 'insert'], ['filter' => 'role:admin']);
+$routes->post('/data-solusi/update/(:any)', [SolusiController::class, 'update/$1'], ['filter' => 'role:admin']);
+$routes->get('/data-solusi/edit/(:segment)', [SolusiController::class, 'edit/$1'], ['filter' => 'role:admin']);
 $routes->delete('/data-solusi/(:any)', [SolusiController::class, 'delete'], ['filter' => 'role:admin']);
 
 //! ROUTES DIAGNOSA

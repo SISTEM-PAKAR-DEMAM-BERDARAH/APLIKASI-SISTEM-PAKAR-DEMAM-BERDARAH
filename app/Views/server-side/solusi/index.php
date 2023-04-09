@@ -48,6 +48,9 @@
                               <td><?= $calldata['detail_solusi']; ?></td>
                               <td><?= $calldata['nama_penyakit']; ?></td>
                               <td>
+                                 <a href="/data-solusi/edit/<?= $calldata['kode_solusi'] ?>" class="btn btn-info btn-sm" title="Edit data ini">
+                                    <span class="uil-edit"></span>
+                                 </a>
                                  <form action="/data-solusi/<?= $calldata['kode_solusi']; ?>" method="post" class="d-inline">
                                     <?= csrf_field(); ?>
                                     <input type="hidden" name="_method" value="DELETE">

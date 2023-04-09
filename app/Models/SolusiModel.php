@@ -16,6 +16,11 @@ class SolusiModel extends Model
       return $this->db->table('solusi')->join('penyakit', 'penyakit.kode_penyakit = solusi.kode_penyakit', 'inner')->get()->getResultArray();
    }
 
+   public function getSolusi($id)
+   {
+      return $this->where(['kode_solusi' => $id])->first();
+   }
+
    public function autoCodeSolusi()
    {
       $selectId = $this->db->table('solusi')->selectMax('kode_solusi')->get()->getResultArray();
@@ -28,6 +33,6 @@ class SolusiModel extends Model
 
    public function getPenyakit($id)
    {
-      return $this->table('solusi')->join('penyakit', 'penyakit.kode_penyakit = solusi.kode_penyakit', 'inner')->where(['kode_pengetahuan' => $id])->first();
+      return $this->table('solusi')->join('penyakit', 'penyakit.kode_penyakit = solusi.kode_penyakit', 'inner')->where(['kode_solusi' => $id])->first();
    }
 }

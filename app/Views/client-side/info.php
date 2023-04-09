@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col-6 col-sm-7 col-md-7 mt-5  col-lg-9 col-xl-9">
-                <h3>Ciri – ciri nyamuk aedes aegypti</h3>
+                <h3>Ciri – ciri nyamuk Aedes Aegypti</h3>
                 <ul>
                     <li>Berwarna hitam dengan belang putih. Saat sudah banyak menghisap darah, bagian perut nyamuk ini menjadi berwarna merah penuh berisi darah.</li>
                     <li>Di dalam rumah, nyamuk ini banyak ditemukan berkembang biak di tempat penampungan air, misalnya bak mandi</li>
@@ -36,15 +36,15 @@
                 <div class="row">
                     <div class="card col-9 mb-4 col-sm-8 col-md-7  col-lg-7  col-xl-3 mx-auto">
                         <img src="user-assets/images/menutup.png" alt="Menutup" class="rounded-circle mx-auto p-2" width="160px">
-                        <p class="text-center">Menutup rapat tempat penyimpanan air</p>
+                        <p  align="justify" >Menutup rapat tempat penyimpanan air</p>
                     </div>
                     <div class="card col-9 mb-4 col-sm-8 col-md-7  col-lg-7 col-xl-3 mx-auto">
                         <img src="user-assets/images/menguras.png" alt="Menguras" class="rounded-circle mx-auto p-2" width="160px">
-                        <p class="text-center">Menguras tempat air secara rutin, setidaknya seminggu sekali</p>
+                        <p  align="justify">Menguras tempat air secara rutin, setidaknya seminggu sekali</p>
                     </div>
                     <div class="card col-9 mb-4 col-sm-8 col-md-7  col-lg-7 col-xl-3 mx-auto">
                         <img src="user-assets/images/mengubur.png" alt="Mengubur atau Mendaur Ulang" class="rounded-circle mx-auto" width="200px">
-                        <p class="text-center">Mengubur atau mendaur ulang barang bekas yang dapat menyebabkan air menggenang</p>
+                        <p  align="justify" >Mengubur atau mendaur ulang barang bekas yang dapat menyebabkan air menggenang</p>
                     </div>
                 </div>
             </div>  
@@ -83,7 +83,7 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
                             <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#dd" aria-expanded="false" aria-controls="dd"> Demam Dengue </button>
                         </p>
                         <div class="collapse" id="dd">
-                            <p class="text-center"> 
+                            <p  align="justify" > 
                                  <span class="fw-bold fst-italic"> Demam Dengue </span>merupakan akibat paling ringan yang ditimbulkan virus dengue. Gejalanya cenderung ringan dan tanpa ada tanda-tanda pendarahan seperti demam, nyeri kepala, mual dan juga ruam di sekujur tubuh.
                             </p>
                         </div>
@@ -97,7 +97,7 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
                             <button class="btn btn-primary justify-content-center  mx-auto mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#dbd" aria-expanded="false" aria-controls="dbd"> Demam Berdarah Dengue </button>
                         </p>
                     <div class="collapse" id="dbd">
-                        <p class="text-center">
+                        <p  align="justify" >
                            <span class="fw-bold fst-italic"> Demam Berdarah Dengue (DBD) </span> merupakan akibat sedang dengan gejala berat yang memiliki tanda-tanda pendarahan seperti mimisan atau tinja yang berwarna merah.Pada fase ini, trombosit mengalami penurunan hingga 40.000 – 100.000 per mikroliter darah. Dengan trombosit normal biasanya 150.000 per mikroliter darah.
                         </p>
                     </div>
@@ -111,7 +111,7 @@ penyebaran virus melalui nyamuk ini. Langkah pencegahan tersebut antara lain:</p
                             <button class="btn btn-primary mx-auto mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#ssd" aria-expanded="false" aria-controls="ssd"> Syok Syndrome Dengue </button>
                         </p>
                     <div class="collapse" id="ssd">
-                    <p align="center">
+                    <p align="justify" >
                      <span class="fw-bold fst-italic"> Syok Syndrome Dengue (SSD) </span>merupakan keadaan yang paling parah yang disebabkan oleh virus dengue. Keadaan ini dapat mengakibatkan syok dan pasien akan mengalami fase komplikasi. Jika tidak segera ditangani, maka komplikasi ini akan mengakibatkan syok yang berisiko kematian. Ciri utamanya adalah trombosit menurun hingga dibawah 40.000 per mikroliter darah. Serta merasakan nyeri ulu hati dan kehilangan kesadaran.
                         </p>
                     </div>

@@ -30,7 +30,7 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="<?= base_url('/dashboard') ?>">Dashboard</a></li>
                 <hr class="dropdown-divider">
-                <li><a class="dropdown-item" href="<?= base_url('/edit') ?>">Ubah Password</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('/ubah-password') ?>">Ubah Password</a></li>
                 <hr class="dropdown-divider">
                 <li><a class="dropdown-item" href="<?= base_url('/logout') ?>">Logout</a></li>
               <?php endif; ?>

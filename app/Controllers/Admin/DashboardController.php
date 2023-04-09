@@ -44,6 +44,7 @@ class DashboardController extends BaseController
    }
 
    public function rules() {
-      return view('/server-side/rules-base');
+      $data = [ 'notif' => $this->DiagnosaModel->notification() ];
+      return view('/server-side/rules-base', $data);
    }
 }

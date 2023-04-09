@@ -22,8 +22,8 @@
             <form action="/update-password" method="post" autocomplete="off">
                 <?= csrf_field() ?>
                 <div class=" mx-auto mb-4">
-                    <input type="text" name="id" value="<?= user()->id ?>">
-                    <input class="form-control p-3" type="text" name="passwordBaru" placeholder="Ulangi Password Baru" required>
+                    <input type="hidden" name="id" value="<?= user()->id ?>">
+                    <input class="form-control p-3" type="password" name="passwordBaru" placeholder="Masukkan password baru Anda" required>
                 </div>
                 <div class="row ">          
                     <div class="d-grid text-center  col-6 mb-3 ">

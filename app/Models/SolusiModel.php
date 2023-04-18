@@ -28,7 +28,7 @@ class SolusiModel extends Model
          $maxId = $solusiId['kode_solusi'];
       }
       $resultId = (int) substr($maxId, 1) + 1;
-      return 'P' . sprintf("%02s", $resultId);
+      return 'S' . sprintf("%02s", $resultId);
    }
 
    public function getPenyakit($id)

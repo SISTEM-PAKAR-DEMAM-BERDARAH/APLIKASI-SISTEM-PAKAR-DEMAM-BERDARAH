@@ -29,7 +29,13 @@
       <div class="dropdown d-inline-block">
          <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="uil-bell"></i>
-            <span class="badge bg-danger rounded-pill">3</span>
+            <?php
+               if ($notif) {
+                  echo "
+                     <span class='badge bg-danger rounded-pill text-danger'>.</span>
+                  ";
+               }
+            ?>
          </button>
          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
             <div class="p-3">

@@ -45,8 +45,8 @@
                            <tr>
                               <td><?= $number++; ?></td>
                               <td><?= $calldata['kode_solusi']; ?></td>
-                              <td><?= $calldata['detail_solusi']; ?></td>
                               <td><?= $calldata['nama_penyakit']; ?></td>
+                              <td><?= $calldata['detail_solusi']; ?></td>
                               <td>
                                  <a href="/data-solusi/edit/<?= $calldata['kode_solusi'] ?>" class="btn btn-info btn-sm" title="Edit data ini">
                                     <span class="uil-edit"></span>
